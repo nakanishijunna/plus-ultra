@@ -1,0 +1,17 @@
+/*======================
+  reset
+======================*/
+html, body, div, span, iframe, h1, h2, h3, h4, p, a, img, dl, dt, dd, ol, ul, li, label, table, tbody, tr, th, td, figure, blockquote { padding: 0; margin: 0; border: 0; vertical-align: baseline; box-sizing: border-box; }
+article, aside, figure, footer, header, nav, section { display: block; }
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+a { text-decoration: none; color: inherit; transition: .3s ease-in; }
+li { list-style: none; }
+img { max-width: 100%; height: auto; vertical-align: middle; }
+video { max-width: 100%; height: auto; }
+table { border-collapse: collapse; border-spacing: 0; table-layout: fixed; }
+input[type="submit"]{ -webkit-appearance: none; border-radius: 0; }
+/*======================*/
+body {
+  font-family: "Lato", "Noto Sans Japanese", "Noto Sans JP", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+  color: #111;
+}

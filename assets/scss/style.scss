@@ -1,0 +1,8 @@
+@import 'base/mixin';
+@import 'base/base';
+@import 'component/component';
+// ここに各ページのscssを追加
+@import 'top';
+@import 'about';
+@import 'component/header';
+@import 'component/footer';
