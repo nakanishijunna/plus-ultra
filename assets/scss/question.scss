@@ -1,0 +1,82 @@
+.wrapper {
+  padding: 0 5%;
+}
+
+.question {
+  padding: 30px 0 50px;
+  background-color: rgba(255, 194, 47, 0.2);
+
+  /*paddingの設定*/
+  $question-padding: 12px 35px 10px 15px;
+
+  .accordion-header {
+    position: relative;
+    margin: 10px 0 0;
+    padding: $question-padding;
+    background-color: #fff;
+    transition: .3s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    p {
+      width: 85%;
+      font-size: 14px;
+    }
+  }
+
+  .accordion-header:hover {
+    background-color: #f2f2f2;
+  }
+
+  .accordion-header::before,
+  .accordion-header::after {
+    position: absolute;
+    content: "";
+    top: 27px;
+    right: 10px;
+    bottom: 0;
+    width: 20px;
+    height: 2px;
+    background: #151e2f;
+  }
+
+  .accordion-header::after {
+    transform: rotate(-90deg);
+    transition: transform 0.3s;
+  }
+
+  .accordion-header.active::after {
+    transform: rotate(0deg);
+  }
+
+
+  .accordion-content {
+    display: none;
+    background-color: #7FBBDD;
+    padding: $question-padding;
+
+    .flex-box {
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      p {
+        width: 85%;
+        font-size: 14px;
+      }
+    }
+  }
+
+
+}
