@@ -1,0 +1,139 @@
+@charset "UTF-8";
+.reason-main {
+  max-width: 600px;
+  text-align: center;
+}
+.reason-main .wrapper {
+  padding-inline: 5%;
+}
+.reason-main .wrapper .title-box {
+  margin: 20px 0;
+}
+
+.grid-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.grid-box .grid-item {
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+  border-radius: 20%;
+  background: #7FBBDD;
+  text-align: center;
+  align-self: center;
+  cursor: pointer;
+}
+.grid-box .grid-item .grid-icon {
+  width: 30px;
+}
+.grid-box .grid-item p {
+  margin-top: 10px;
+  font-size: 10px;
+}
+.grid-box .grid-item:nth-child(2n) {
+  background: rgba(255, 226, 47, 0.6);
+}
+
+.mask {
+  display: none;
+  position: fixed;
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  transition: 0.5s;
+  z-index: 10;
+}
+.mask.open {
+  display: block;
+}
+
+.mask-content {
+  display: none;
+  width: 90%;
+  max-width: 600px;
+  transition: 0.5s;
+  z-index: 20;
+}
+.mask-content.show {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+.mask-content h3 {
+  margin-bottom: 30px;
+  color: #FFC22F;
+  font-size: 20px;
+}
+.mask-content p {
+  text-align: left;
+}
+
+.reason-text {
+  margin: 50px 0;
+}
+.reason-text-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  /*色と角の設定*/
+}
+.reason-text-box .orangebox {
+  padding: 10px 20px;
+  background: #FFC22F;
+  border-radius: 10px;
+  border: 1px solid #000;
+}
+.reason-text-box .bluebox {
+  padding: 10px 20px;
+  background: #7FBBDD;
+  border-radius: 10px;
+  border: 1px solid #000;
+}
+.reason-text-box p:nth-child(2) {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.reason-detail {
+  width: 87%;
+  margin-left: auto;
+  text-align: left;
+}
+.reason-detail dt {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 13px;
+}
+.reason-detail dd {
+  font-size: 12px;
+}
+.reason-detail .analize, .reason-detail .support {
+  position: relative;
+  margin-bottom: 20px;
+}
+.reason-detail .analize::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  top: 0;
+  left: -30px;
+  background-image: url(/plus-ultra/img/reason10.png);
+  background-size: contain;
+}
+.reason-detail .support::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  top: 0;
+  left: -30px;
+  background-image: url(/plus-ultra/img/reason11.png);
+  background-size: contain;
+}/*# sourceMappingURL=reason.css.map */
