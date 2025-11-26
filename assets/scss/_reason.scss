@@ -3,7 +3,7 @@
   text-align: center;
 
   .wrapper {
-    padding-inline: 5%;
+    background-color: #fff;
 
     .title-box {
       margin: 20px 0;
@@ -11,6 +11,7 @@
   }
 }
 
+/*四角の説明×９個*/
 .grid-box {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -41,6 +42,7 @@
   }
 }
 
+/*四角をクリックしたら出てくる説明文*/
 .mask {
   display: none;
   position: fixed;
@@ -60,7 +62,7 @@
   display: none;
   width: 90%;
   max-width: 600px;
-  transition: 0.5s;
+  transition: 0.8s;
   z-index: 20;
 
   &.show {
@@ -84,7 +86,7 @@
   }
 }
 
-
+/*ページ中間の説明文*/
 .reason-text {
   margin: 50px 0;
 
@@ -120,6 +122,7 @@
   }
 }
 
+/*ページ下層の説明文*/
 .reason-detail {
   width: 87%;
   margin-left: auto;
@@ -135,7 +138,7 @@
       font-size: 12px;
     }
 
-    .analize,.support {
+    .analize,.support-txt {
       position: relative;
       margin-bottom: 20px;
     }
@@ -151,7 +154,7 @@
       background-size: contain;
     }
 
-    .support::before{
+    .support-txt::before{
       position: absolute;
       content: "";
       width: 25px;
