@@ -11,7 +11,7 @@
 .question .accordion-header {
   position: relative;
   margin: 10px 0 0;
-  padding: 12px 35px 10px 15px;
+  padding: 10px 35px 10px 15px;
   background-color: #fff;
   transition: 0.3s ease;
   cursor: pointer;
