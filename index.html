@@ -6,177 +6,236 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/scss/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <title>Document</title>
 </head>
 
 <body>
-    <header>
-
-    </header>
-<section id="empathy" class="p-empathy">
-            <div class="p-empathy__reading-wrapper">
-                <div class="p-empathy__reading">
-                    <h2>こんなお悩み <br>
-                        ありませんか？</h2>
-                </div>
-            </div>
-            <div class="p-empathy__worries__wrapper">
-                <div class="p-empathy__worries-lists">
-                    <div class="p-empathy__worries-list">パソコンなんてほとんど触ったことがない…</div>
-                    <div class="p-empathy__worries-list">続けられるか不安…</div>
-                    <div class="p-empathy__worries-list">案件は取れるのかな…</div>
-                    <div class="p-empathy__worries-list">結局どんなスクールがいいか分からない…</div>
-                </div>
-            </div>
-            <div class="p-empathy__answer-wrapper">
-                <div class="p-empathy__answer-reading">
-                    <h2>その不安に、<br>
-                        私たちはこう応えます。</h2>
-                </div>
-                <div class="p-empathy__answer-lists">
-                    <div class="p-empathy__answer-list">未経験から始めた方が8割以上</div>
-                    <div class="p-empathy__answer-list">プロのコーチが週1で伴走</div>
-                    <div class="p-empathy__answer-list">実際の案件に営業マンが同行</div>
-                    <div class="p-empathy__answer-list">満足度99%、案件獲得率93%</div>
-                </div>
-                <div class="p-empathy__answer-catch">
-                    <div class="p-empathy__answer-text">
-                        <span>“やってみたい”</span>
-                        という気持ちを、安心して育てられる環境があります。
+    <!-- 左のヘッダーの役割 -->
+    <div class="layout">
+        <div class="left-col">
+            <header class="header" id="head_wrap">
+                <div class="inner">
+                    <div id="mobile-head">
+                        <h1 class="logo">
+                            ロゴ
+                        </h1>
+                        <div id="nav-toggle">
+                            <div>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
                     </div>
+                    <nav id="global-nav">
+                        <ul>
+                            <li><a href="#menu1">MENU1</a></li>
+                            <li><a href="#menu2">MENU2</a></li>
+                            <li><a href="#menu3">MENU3</a></li>
+                            <li><a href="#menu4">MENU4</a></li>
+                            <li><a href="#menu5">MENU5</a></li>
+                            <li><a href="#menu6">MENU6</a></li>
+                        </ul>
+                    </nav>
                 </div>
-            </div>
-        </section>
-
-    <section id="reason">
-
-        <div class="reason-main">
-            <div class="wrapper">
-                <div class="title-box">
-                    <p>プロナビが選ばれる</p>
-                    <h2 class="section-title">9つの理由</h2>
-                </div>
-
-                <div class="grid-box">
-                    <div class="grid-item" data-target="mask1">
-                        <img class="grid-icon" src="img/reason1.png" alt="コーチング特化型">
-                        <p>コーチング<br>特化型</p>
-                    </div>
-                    <div class="grid-item" data-target="mask2">
-                        <img class="grid-icon" src="img/reason2.png" alt="オリジナル教材">
-                        <p>オリジナル<br>教材</p>
-                    </div>
-                    <div class="grid-item" data-target="mask3">
-                        <img class="grid-icon" src="img/reason3.png" alt="あなた専用カリキュラム">
-                        <p>あなた専用<br>カリキュラム</p>
-                    </div>
-                    <div class="grid-item" data-target="mask4">
-                        <img class="grid-icon" src="img/reason4.png" alt="担当者制度">
-                        <p>担当者制度</p>
-                    </div>
-                    <div class="grid-item" data-target="mask5">
-                        <img class="grid-icon" src="img/reason5.png" alt="LINEサポート">
-                        <p>LINEサポート<br>（24時間）</p>
-                    </div>
-                    <div class="grid-item" data-target="mask6">
-                        <img class="grid-icon" src="img/reason6.png" alt="週1MT授業">
-                        <p>週1回授業<br>＆ミーティング</p>
-                    </div>
-                    <div class="grid-item" data-target="mask7">
-                        <img class="grid-icon" src="img/reason7.png" alt="限定セミナー">
-                        <p>限定<br>セミナー</p>
-                    </div>
-                    <div class="grid-item" data-target="mask8">
-                        <img class="grid-icon" src="img/reason8.png" alt="案件獲得プログラム">
-                        <p>案件獲得<br>
-                            プログラム</p>
-                    </div>
-                    <div class="grid-item" data-target="mask9">
-                        <img class="grid-icon" src="img/reason9.png" alt="自社案件紹介制度">
-                        <p>自社案件<br>紹介制度</p>
-                    </div>
-                </div>
-
-                <div class="mask"></div>
-
-                <div id="mask1" class="mask-content wrapper">
-                    <h3>\ コーチング特化型 /</h3>
-                    <p>ただのマンツーマンではなく、その人自身を成長させます！<br>
-                        プログラミングを理解し、使えるようになるまでをサポート。着実にスキルが身に付きます。</p>
-                </div>
-                <div id="mask2" class="mask-content">
-                    <h3>\ オリジナル教材 /</h3>
-                    <p>2年以上かけて、学習に最適な教材を作りあげました。<br>
-                        部外秘の最高傑作です！</p>
-                </div>
-                <div id="mask3" class="mask-content">
-                    <h3>\ あなた専用カリキュラム /</h3>
-                    <p>学習状況や1日に確保できる時間、 いつまでに案件をとりたいかなど、人によって異なる部分を聞き取り、<br>
-                        一人一人に合わせたカリキュラをカスタマイズします。
-                        </p>
-                </div>
-                <div id="mask4" class="mask-content">
-                    <h3>\ 担当者制度 /</h3>
-                    <p>あなた専属の講師がつくので<br>
-                        癖や進捗、性格などを踏まえてサポートします！<br>
-                        ずっと一人がつくので、聞きやすい・頼りやすい関係を構築できます。</p>
-                </div>
-                <div id="mask5" class="mask-content">
-                    <h3>\ LINEサポート /</h3>
-                    <p>プログラミング学習において重要なのが、人に頼ること。<br>
-                        LINEでいつでも聞ける環境を整えています！</p>
-                </div>
-                <div id="mask6" class="mask-content">
-                    <h3>\ コーチング特化型 /</h3>
-                    <p>ただのマンツーマンではなく、その人自身を成長させます！<br>
-                        プログラミングを理解し、使えるようになるまでをサポート。着実にスキルが身に付きます。</p>
-                </div>
-                <div id="mask7" class="mask-content">
-                    <h3>\ コーチング特化型 /</h3>
-                    <p>ただのマンツーマンではなく、その人自身を成長させます！<br>
-                        プログラミングを理解し、使えるようになるまでをサポート。着実にスキルが身に付きます。</p>
-                </div>
-                <div id="mask8" class="mask-content">
-                    <h3>\ コーチング特化型 /</h3>
-                    <p>ただのマンツーマンではなく、その人自身を成長させます！<br>
-                        プログラミングを理解し、使えるようになるまでをサポート。着実にスキルが身に付きます。</p>
-                </div>
-                <div id="mask9" class="mask-content">
-                    <h3>\ コーチング特化型 /</h3>
-                    <p>ただのマンツーマンではなく、その人自身を成長させます！<br>
-                        プログラミングを理解し、使えるようになるまでをサポート。着実にスキルが身に付きます。</p>
-                </div>
-
-                <div class="reason-text">
-                    <p>プログラミングスキルの習得には</p>
-                    <div class="reason-text-box">
-                        <p class="orangebox">学習生産性</p>
-                        <p>×</p>
-                        <p class="bluebox">学習時間</p>
-                    </div>
-                    <p>の最大化が不可欠</p>
-                </div>
-
-                <div class="reason-detail">
-                    <dl class="reason-detail-analize">
-                        <dt>あなたの弱点を分析し、最適な学習を提供</dt>
-                        <dd>学習の目的を明確にし、「何のために学ぶか」を意識することで、効率的にスキルを伸ばします。</dd>
-                    </dl>
-                    <dl class="reason-detail-support">
-                        <dt>毎日の学習を継続するサポート</dt>
-                        <dd>あなたの生活リズムに合わせた学習計画と、コーチの伴走で「続けられる学び」を実現。</dd>
-                    </dl>
-                </div>
-
-
-            </div>
+            </header>
         </div>
-    </section>
+        <!-- 真ん中のメイン -->
+        <div class="center-col">
+            <section id="empathy" class="p-empathy">
+                <div class="p-empathy__reading-wrapper">
+                    <div class="p-empathy__reading">
+                        <h2>こんなお悩み <br>
+                            ありませんか？</h2>
+                    </div>
+                </div>
+                <div class="p-empathy__worries__wrapper">
+                    <div class="p-empathy__worries-lists">
+                        <div class="p-empathy__worries-list">パソコンなんてほとんど触ったことがない…</div>
+                        <div class="p-empathy__worries-list">続けられるか不安…</div>
+                        <div class="p-empathy__worries-list">案件は取れるのかな…</div>
+                        <div class="p-empathy__worries-list">結局どんなスクールがいいか分からない…</div>
+                    </div>
+                </div>
+                <div class="p-empathy__answer-wrapper">
+                    <div class="p-empathy__answer-reading">
+                        <h2>その不安に、<br>
+                            私たちはこう応えます。</h2>
+                    </div>
+                    <div class="p-empathy__answer-lists">
+                        <div class="p-empathy__answer-list">未経験から始めた方が8割以上</div>
+                        <div class="p-empathy__answer-list">プロのコーチが週1で伴走</div>
+                        <div class="p-empathy__answer-list">実際の案件に営業マンが同行</div>
+                        <div class="p-empathy__answer-list">満足度99%、案件獲得率93%</div>
+                    </div>
+                    <div class="p-empathy__answer-catch">
+                        <div class="p-empathy__answer-text">
+                            <span>“やってみたい”</span>
+                            という気持ちを、安心して育てられる環境があります。
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            <section id="reason">
 
+                <div class="reason-main">
+                    <div class="wrapper">
+                        <div class="title-box">
+                            <p>プロナビが選ばれる</p>
+                            <h2 class="section-title">9つの理由</h2>
+                        </div>
 
+                        <div class="grid-box">
+                            <div class="grid-item" data-target="mask1">
+                                <img class="grid-icon" src="img/reason1.png" alt="コーチング特化型">
+                                <p>コーチング<br>特化型</p>
+                            </div>
+                            <div class="grid-item" data-target="mask2">
+                                <img class="grid-icon" src="img/reason2.png" alt="オリジナル教材">
+                                <p>オリジナル<br>教材</p>
+                            </div>
+                            <div class="grid-item" data-target="mask3">
+                                <img class="grid-icon" src="img/reason3.png" alt="あなた専用カリキュラム">
+                                <p>あなた専用<br>カリキュラム</p>
+                            </div>
+                            <div class="grid-item" data-target="mask4">
+                                <img class="grid-icon" src="img/reason4.png" alt="担当者制度">
+                                <p>担当者制度</p>
+                            </div>
+                            <div class="grid-item" data-target="mask5">
+                                <img class="grid-icon" src="img/reason5.png" alt="LINEサポート">
+                                <p>LINEサポート<br>（24時間）</p>
+                            </div>
+                            <div class="grid-item" data-target="mask6">
+                                <img class="grid-icon" src="img/reason6.png" alt="週1MT授業">
+                                <p>週1回授業<br>＆ミーティング</p>
+                            </div>
+                            <div class="grid-item" data-target="mask7">
+                                <img class="grid-icon" src="img/reason7.png" alt="限定セミナー">
+                                <p>限定<br>セミナー</p>
+                            </div>
+                            <div class="grid-item" data-target="mask8">
+                                <img class="grid-icon" src="img/reason8.png" alt="案件獲得プログラム">
+                                <p>案件獲得<br>
+                                    プログラム</p>
+                            </div>
+                            <div class="grid-item" data-target="mask9">
+                                <img class="grid-icon" src="img/reason9.png" alt="自社案件紹介制度">
+                                <p>自社案件<br>紹介制度</p>
+                            </div>
+                        </div>
+
+                        <div class="mask"></div>
+
+                        <div id="mask1" class="mask-content wrapper">
+                            <h3>\ コーチング特化型 /</h3>
+                            <p>ただのマンツーマンではなく、その人自身を成長させます！<br>
+                                プログラミングを理解し、使えるようになるまでをサポート。着実にスキルが身に付きます。</p>
+                        </div>
+                        <div id="mask2" class="mask-content">
+                            <h3>\ オリジナル教材 /</h3>
+                            <p>2年以上かけて、学習に最適な教材を作りあげました。<br>
+                                部外秘の最高傑作です！</p>
+                        </div>
+                        <div id="mask3" class="mask-content">
+                            <h3>\ あなた専用カリキュラム /</h3>
+                            <p>学習状況や1日に確保できる時間、 いつまでに案件をとりたいかなど、人によって異なる部分を聞き取り、<br>
+                                一人一人に合わせたカリキュラをカスタマイズします。
+                            </p>
+                        </div>
+                        <div id="mask4" class="mask-content">
+                            <h3>\ 担当者制度 /</h3>
+                            <p>あなた専属の講師がつくので<br>
+                                癖や進捗、性格などを踏まえてサポートします！<br>
+                                ずっと一人がつくので、聞きやすい・頼りやすい関係を構築できます。</p>
+                        </div>
+                        <div id="mask5" class="mask-content">
+                            <h3>\ LINEサポート /</h3>
+                            <p>プログラミング学習において重要なのが、人に頼ること。<br>
+                                LINEでいつでも聞ける環境を整えています！</p>
+                        </div>
+                        <div id="mask6" class="mask-content">
+                            <h3>\ コーチング特化型 /</h3>
+                            <p>ただのマンツーマンではなく、その人自身を成長させます！<br>
+                                プログラミングを理解し、使えるようになるまでをサポート。着実にスキルが身に付きます。</p>
+                        </div>
+                        <div id="mask7" class="mask-content">
+                            <h3>\ コーチング特化型 /</h3>
+                            <p>ただのマンツーマンではなく、その人自身を成長させます！<br>
+                                プログラミングを理解し、使えるようになるまでをサポート。着実にスキルが身に付きます。</p>
+                        </div>
+                        <div id="mask8" class="mask-content">
+                            <h3>\ コーチング特化型 /</h3>
+                            <p>ただのマンツーマンではなく、その人自身を成長させます！<br>
+                                プログラミングを理解し、使えるようになるまでをサポート。着実にスキルが身に付きます。</p>
+                        </div>
+                        <div id="mask9" class="mask-content">
+                            <h3>\ コーチング特化型 /</h3>
+                            <p>ただのマンツーマンではなく、その人自身を成長させます！<br>
+                                プログラミングを理解し、使えるようになるまでをサポート。着実にスキルが身に付きます。</p>
+                        </div>
+
+                        <div class="reason-text">
+                            <p>プログラミングスキルの習得には</p>
+                            <div class="reason-text-box">
+                                <p class="orangebox">学習生産性</p>
+                                <p>×</p>
+                                <p class="bluebox">学習時間</p>
+                            </div>
+                            <p>の最大化が不可欠</p>
+                        </div>
+
+                        <div class="reason-detail">
+                            <dl class="reason-detail-analize">
+                                <dt>あなたの弱点を分析し、最適な学習を提供</dt>
+                                <dd>学習の目的を明確にし、「何のために学ぶか」を意識することで、効率的にスキルを伸ばします。</dd>
+                            </dl>
+                            <dl class="reason-detail-support">
+                                <dt>毎日の学習を継続するサポート</dt>
+                                <dd>あなたの生活リズムに合わせた学習計画と、コーチの伴走で「続けられる学び」を実現。</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- 右側の動画や疑似エディタを置くカラム -->
+        <div class="right-col">
+            <!-- 疑似エディタ -->
+            <section class="editor">
+                <h2 class="editor__title">まずは動かしてみよう</h2>
+                <div class="editor__container">
+                    <div class="editor__challenge">お題がここに表示されます</div>
+                    <div class="editor__code-group">
+                        <!-- 疑似エディタ部分 -->
+                        <div class="editor__code-block">
+                            <h3 class="editor__label">HTML</h3>
+                            <div id="editor-html" class="editor__code"></div>
+                        </div>
+                        <div class="editor__code-block">
+                            <h3 class="editor__label">CSS</h3>
+                            <div id="editor-css" class="editor__code"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-editor__button-wrapper">
+                    <button class="editor__run">動かしてみる</button>
+                    <button class="editor__next">次のお題</button>
+                </div>
+                <!-- ここに書いたコードが反映される -->
+                <div class="editor__preview"></div>
+            </section>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/plus-ultra/assets/js/reason.js"></script>
+    <script type="module" src="assets/js/editor.js"></script>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="/plus-ultra/assets/js/reason.js"></script>
 
 </html>
