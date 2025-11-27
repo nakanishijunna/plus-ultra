@@ -1,9 +1,10 @@
 .reason-main {
-  max-width: 600px;
+  margin: auto;
   text-align: center;
 
   .wrapper {
     padding-inline: 5%;
+      background-color: #fff;
 
     .title-box {
       margin: 20px 0;
@@ -27,12 +28,13 @@
     cursor: pointer;
 
     .grid-icon {
-      width: 30px;
+      width: 35px;
+      height: 35px;
     }
 
     p {
       margin-top: 10px;
-      font-size: 10px;
+      font-size: 16px;
     }
   }
 
@@ -90,7 +92,7 @@
 
   &-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
     margin: 10px 0;
 
@@ -121,43 +123,43 @@
 }
 
 .reason-detail {
-  width: 87%;
+  width: 90%;
   margin-left: auto;
   text-align: left;
 
     dt {
       margin-bottom: 5px;
       font-weight: bold;
-      font-size: 13px;
+      font-size: 18px;
     }
 
     dd {
-      font-size: 12px;
+      font-size: 15px;
     }
 
-    .analize,.support {
+    &-analize,&-support {
       position: relative;
       margin-bottom: 20px;
     }
 
-    .analize::before {
+    &-analize::before {
       position: absolute;
       content: "";
-      width: 25px;
-      height: 25px;
+      width: 30px;
+      height: 30px;
       top: 0;
-      left: -30px;
+      left: -35px;
       background-image: url(/plus-ultra/img/reason10.png);
       background-size: contain;
     }
 
-    .support::before{
+    &-support::before{
       position: absolute;
       content: "";
-      width: 25px;
-      height: 25px;
+      width: 30px;
+      height: 30px;
       top: 0;
-      left: -30px;
+      left: -35px;
       background-image: url(/plus-ultra/img/reason11.png);
       background-size: contain;
     }
