@@ -1,0 +1,67 @@
+@charset "UTF-8";
+.wrapper {
+  padding: 0 5%;
+}
+
+.question {
+  padding: 30px 0 50px;
+  background-color: rgba(255, 194, 47, 0.2);
+  /*paddingの設定*/
+}
+.question .accordion-header {
+  position: relative;
+  margin: 10px 0 0;
+  padding: 10px 35px 10px 15px;
+  background-color: #fff;
+  transition: 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.question .accordion-header span {
+  font-size: 20px;
+  font-weight: bold;
+}
+.question .accordion-header p {
+  width: 85%;
+  font-size: 14px;
+}
+.question .accordion-header:hover {
+  background-color: #f2f2f2;
+}
+.question .accordion-header::before,
+.question .accordion-header::after {
+  position: absolute;
+  content: "";
+  top: 27px;
+  right: 10px;
+  bottom: 0;
+  width: 20px;
+  height: 2px;
+  background: #151e2f;
+}
+.question .accordion-header::after {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+}
+.question .accordion-header.active::after {
+  transform: rotate(0deg);
+}
+.question .accordion-content {
+  display: none;
+  background-color: #7FBBDD;
+  padding: 12px 35px 10px 15px;
+}
+.question .accordion-content .flex-box {
+  display: flex;
+  justify-content: space-between;
+}
+.question .accordion-content .flex-box span {
+  font-size: 20px;
+  font-weight: bold;
+}
+.question .accordion-content .flex-box p {
+  width: 85%;
+  font-size: 14px;
+}/*# sourceMappingURL=question.css.map */
