@@ -1,1 +1,31 @@
+.g__counseling {
+  width: 100%;
 
+  &__text {
+    width: 90%;
+  }
+
+  &__text::before {
+    display: block;
+    content: "";
+    width: 1px;
+    height: 16px;
+    background-color: #fff;
+    transform: rotate(-45deg);
+  }
+
+}
+
+.g__counseling__container {
+  display: flex;
+
+  .g__counseling__reserve {
+    width: 50%;
+    background-color: rgba(255,194,47,20%);
+  }
+
+  .g__counseling__line {
+    width: 50%;
+    background-color: #07B53B;
+  }
+}
