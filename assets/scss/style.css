@@ -1200,31 +1200,132 @@ body {
   padding-bottom: 1rem;
 }
 
+a {
+  display: inline-block;
+}
+
 .g__counseling {
-  width: 100%;
+  background-color: #fff;
+}
+.g__counseling .wrapper {
+  background-color: #fff;
 }
 .g__counseling__text {
-  width: 90%;
+  width: 100%;
+  margin: 50px auto 20px;
 }
-.g__counseling__text::before {
+.g__counseling__text p {
+  position: relative;
+  width: 65%;
+  margin: 0 auto;
+}
+.g__counseling__text p::before {
   display: block;
+  position: absolute;
+  left: -40px;
+  bottom: 0;
   content: "";
-  width: 1px;
-  height: 16px;
-  background-color: #fff;
-  transform: rotate(-45deg);
+  width: 1.5px;
+  height: 50px;
+  background-color: #000;
+  transform: rotate(-30deg);
+}
+.g__counseling__text p::after {
+  display: block;
+  position: absolute;
+  right: -10px;
+  bottom: 0;
+  content: "";
+  width: 1.5px;
+  height: 50px;
+  background-color: #000;
+  transform: rotate(30deg);
 }
 
 .g__counseling__container {
   display: flex;
+  text-align: center;
+  /*カウンセリング予約*/
+  /*hoverしたらオレンジに変わる*/
+  /*LINE予約*/
+  /*hoverしたら水色に変わる*/
+}
+.g__counseling__container p {
+  margin-bottom: 10px;
+  padding-inline: 10px;
+  font-size: 14px;
+  color: #000;
+}
+.g__counseling__container img {
+  width: 80px;
 }
 .g__counseling__container .g__counseling__reserve {
-  width: 50%;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 205px;
+  padding: 5%;
   background-color: rgba(255, 194, 47, 0.2);
+  z-index: 1;
+}
+.g__counseling__container .g__counseling__reserve h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #000;
+}
+.g__counseling__container .g__counseling__reserve::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: center;
+  transition: 0.4s ease;
+  background-color: #FFC22F;
+  z-index: -1;
+}
+.g__counseling__container .g__counseling__reserve:hover {
+  color: #fff;
+}
+.g__counseling__container .g__counseling__reserve:hover::after {
+  transform: scale(1, 1);
 }
 .g__counseling__container .g__counseling__line {
-  width: 50%;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 205px;
+  padding: 5%;
   background-color: #07B53B;
+  z-index: 1;
+}
+.g__counseling__container .g__counseling__line h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.g__counseling__container .g__counseling__line img {
+  margin-top: 15px;
+}
+.g__counseling__container .g__counseling__line::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: center;
+  transition: 0.4s ease;
+  background-color: #7FBBDD;
+  z-index: -1;
+}
+.g__counseling__container .g__counseling__line:hover {
+  color: #fff;
+}
+.g__counseling__container .g__counseling__line:hover::after {
+  transform: scale(1, 1);
 }
 
 .editor {
