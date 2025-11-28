@@ -2,7 +2,7 @@
 @import 'base/base';
 @import 'component/component';
 // ここに各ページのscssを追加
-@import 'top';
+@import 'layout';
 @import 'about';
 @import 'component/header';
 @import 'component/footer';
@@ -12,4 +12,5 @@
 @import 'step';
 @import 'component/about';
 @import 'component/voice';
-@import 'counseling'
+@import 'counseling';
+@import 'component/editor';
