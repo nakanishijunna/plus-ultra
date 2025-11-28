@@ -31,10 +31,10 @@
 
                         <div class="step1-box-body">
                             <div class="step-box-inner">
-                                <h3>“悩んでいる今こそ、<br>まずは話してみませんか？”</h3>
+                                <h3>“<span>悩んでいる</span>今こそ、<br>まずは話してみませんか？”</h3>
                                 <p>
-                                    現状のスキルや叶えたい未来を伺い、あなたに最適な道筋を一緒に描きます。<br>
-                                    勧誘目的ではなく、純粋にあなたの将来の選択肢を広げるための時間です。
+                                    現状のスキルや叶えたい未来を伺い、あなたに<span>最適な道筋を</span>一緒に描きます。<br>
+                                    勧誘目的ではなく、純粋にあなたの将来の<span>選択肢を広げるため</span>の時間です。
                                 </p>
                             </div>
                         </div>
@@ -51,7 +51,7 @@
 
                         <div class="step2-box-body">
                             <div class="step-box-content">
-                                <h3>未来を変える、”６ヵ月”</h3>
+                                <h3><span>未来を変える</span>、”６ヵ月”</h3>
                                 <p class="money">総額550,000円</p>
                                 <p>
                                     さぁ、無料カウンセリングへ！！<br>
@@ -73,8 +73,8 @@
 
                         <div class="step3-box-body">
                             <div class="step-box-curriculums">
-                                <h3>未経験から始める方のカリキュラムです。</h3>
-                                <p>経験や個人の学習スピードにより変わります。</p>
+                                <h3>🖋未経験から始める方のカリキュラムの例です。</h3>
+                                <p>※経験や個人の学習スピードにより変わります。</p>
                             </div>
 
                             <div class="curriculum">
@@ -128,23 +128,23 @@
 
                         <div class="step4-box-body">
                             <div class="step-box-pointer">
-                                <h3>他社とは違う、<br><span>”最後まで寄り添う”</span><br>サポート体制。</h3>
+                                <h3>他社とは違う、<br>”<span>最後まで寄り添う</span>”<br>サポート体制。</h3>
                                 <p>学びも、仕事も、あなたひとりにはしません。</p>
                             </div>
 
                             <div class="point">
                                 <div class="point-content">
                                     <p class="points">point01</p>
-                                    <img class="icon" src="img/calendar.png" alt="">
-                                    <p><span>学習スケジュールを毎週管理</span></p>
-                                    <p>毎週、あなた専用の学習プランを作成。専属コーチが伴走します。</p>
+                                    <img class="icons" src="img/calendar.png" alt="">
+                                    <p><span>スケジュールを毎週管理</span></p>
+                                    <p class="get">毎週、あなた専用の学習プランを作成。専属コーチが伴走します。</p>
                                 </div>
 
                                 <div class="point-content">
                                     <p class="points">point02</p>
-                                    <img class="icon" src="img/line.png" alt="">
+                                    <img class="icons" src="img/line.png" alt="">
                                     <p><span>公式LINEで24時間質問OK</span></p>
-                                    <p>わからない瞬間に、すぐ質問できる。夜でも休日でも、いつでもサポート！</p>
+                                    <p class="get">わからない瞬間に、すぐ質問できる。夜でも休日でも、いつでもサポート！</p>
                                 </div>
                             </div>
 
@@ -152,11 +152,11 @@
                                 <div class="point">
                                     <div class="point-contents">
                                         <p class="points">point03</p>
-                                        <img class="icon" src="img/bag.png" alt="">
+                                        <img class="icons" src="img/bag.png" alt="">
                                         <p><span>案件獲得サポート</span></p>
                                     </div>
                                     <div class="point-text">
-                                        <p>
+                                        <p class="get">
                                             案件獲得に向け、プロの営業マンが伴走。
                                             あなたの営業に同行し、実際の営業を見ながら案件獲得を支援。
                                             LINEでいつでも質問可能です。
@@ -188,11 +188,8 @@
                         <div class="step5-box-body">
                             <div class="step-box-start">
                                 <h3>ここからがスタートです。</h3>
-                                <p class="lost">あなたの挑戦を<br>全力でサポート！🚀</p>
-
-                                <p>
-                                    現状のスキルや叶えたい未来を伺い、あなたに最適な道筋を一緒に描きます。<br>
-                                    勧誘目的ではなく、純粋にあなたの将来の選択肢を広げるための時間です。
+                                <p class="lost">あなたの挑戦を<br>
+                                    <span>&emsp;&emsp;&emsp;&emsp;全力でサポート！🚀</span>
                                 </p>
                             </div>
 
@@ -205,6 +202,59 @@
         </div>
     </main>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const accordions = document.querySelectorAll(".step_box");
+
+    accordions.forEach(acc => {
+        const icon = acc.querySelector(".icon");
+        const body = acc.querySelector(".step-box-body");
+
+        body.style.overflow = "hidden";
+        body.style.maxHeight = "0px";
+        body.style.transition = "max-height 1.5s ease, opacity 1.5s ease";
+        body.style.opacity = 0;
+
+        // summaryクリックをJSで制御する
+        const summary = acc.querySelector("summary");
+        summary.addEventListener("click", (e) => {
+            e.preventDefault(); // ←ここが重要：ブラウザの自動開閉を無効化
+            const isOpen = acc.classList.contains("open");
+
+            // 他のアコーディオンを閉じる
+            accordions.forEach(other => {
+                if (other !== acc) {
+                    other.classList.remove("open");
+                    const otherBody = other.querySelector(".step-box-body");
+                    otherBody.style.maxHeight = "0px";
+                    otherBody.style.opacity = 0;
+                    const otherIcon = other.querySelector(".icon");
+                    otherIcon.style.transform = "rotate(0deg)";
+                }
+            });
+
+            if (!isOpen) {
+                // 開く
+                acc.classList.add("open");
+                const scrollHeight = body.scrollHeight;
+                body.style.maxHeight = scrollHeight + "px";
+                body.style.opacity = 1;
+                icon.style.transform = "rotate(45deg)";
+
+                // スクロール自動調整
+                const topPos = acc.getBoundingClientRect().top + window.scrollY - 50;
+                window.scrollTo({ top: topPos, behavior: "smooth" });
+            } else {
+                // 閉じる
+                acc.classList.remove("open");
+                body.style.maxHeight = "0px";
+                body.style.opacity = 0;
+                icon.style.transform = "rotate(0deg)";
+            }
+        });
+    });
+});
+</script>
 </body>
 
 </html>
