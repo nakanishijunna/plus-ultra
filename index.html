@@ -11,36 +11,37 @@
 </head>
 
 <body>
-    <!-- 左のヘッダーの役割 -->
     <div class="layout">
+        <!-- 左のヘッダーの役割 -->
         <div class="left-col">
-            <header class="header" id="head_wrap">
-                <div class="inner">
-                    <div id="mobile-head">
-                        <h1 class="logo">
-                            ロゴ
-                        </h1>
-                        <div id="nav-toggle">
-                            <div>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </div>
+            <header>
+                <nav class="navbar">
+                    <div class="p-header__logo">
+                        <a href="#">
+                            <img src="img/logo.png" alt="ProNavi">
+                        </a>
                     </div>
-                    <nav id="global-nav">
-                        <ul>
-                            <li><a href="#menu1">MENU1</a></li>
-                            <li><a href="#menu2">MENU2</a></li>
-                            <li><a href="#menu3">MENU3</a></li>
-                            <li><a href="#menu4">MENU4</a></li>
-                            <li><a href="#menu5">MENU5</a></li>
-                            <li><a href="#menu6">MENU6</a></li>
-                        </ul>
-                    </nav>
-                </div>
+
+                    <!-- type="button" を明示、ARIAで状態を伝える -->
+                    <button class="hamburger" id="hamburger" type="button" aria-label="メニュー" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="#">Pronaviについて</a></li>
+                        <li><a href="#">未来を変える<br>
+                                5つのステップ</a></li>
+                        <li><a href="#">受講生の声</a></li>
+                        <li><a href="#">受講生の実績</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Q＆A</a></li>
+                    </ul>
+                </nav>
             </header>
         </div>
+
         <!-- 真ん中のメイン -->
         <div class="center-col">
             <section id="empathy" class="p-empathy">
@@ -234,6 +235,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/assets/js/hamburger.js"></script>
     <script src="/plus-ultra/assets/js/reason.js"></script>
     <script type="module" src="assets/js/editor.js"></script>
 </body>

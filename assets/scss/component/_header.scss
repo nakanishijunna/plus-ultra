@@ -1,4 +1,209 @@
-header {
-    background:blue;
-    height: 80px;
+
+.p-header__logo {
+  width: 60%;
+  @include mq(sp) {
+    width: 15%;
+  }
 }
+
+.p-header__logo img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ハンバーガーボタン（共通） */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  @include mq(sp) {
+    display: flex;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1002; /* メニューより前面 */
+  }
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #333;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+  transform-origin: center;
+}
+
+/* PC時のナビ */
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem;
+  width: 100%;
+  background-color: #fff;
+  padding-top: 5rem;
+  @include mq(sp) {
+    position: fixed;
+    inset: 0; /* top:0; right:0; bottom:0; left:0; と同義 */
+    background: rgba(255,246,216,0.9);
+    z-index: 1000; /* ボタンより背面にする */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 0;
+    padding-inline: 20%;
+    margin-inline: auto;
+
+    /* 上から隠してスライドイン */
+    transform: translateY(-100%);
+    transition: transform 0.4s ease-in-out;
+    /* スクロールを防ぎ、リンク以外のクリックは透過させない（デフォルトのまま） */
+  }
+}
+
+.nav-links.active {
+    @include mq(sp) {
+        transform: translateY(0);
+    }
+  }
+
+.nav-links li {
+    margin-bottom: 1.3rem;
+    padding: 0.625rem;
+    width: fit-content;
+    cursor: pointer;
+    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+    @include mq(sp) {
+        padding: 1rem 5rem;
+    }
+}
+
+  .nav-links li:nth-child(odd) {
+    margin-left: auto;
+    background-color: #7FBBDD;
+    box-shadow: 0 4px 0 #283a44; // ボタンの影
+    transform: rotate(-14deg);
+    @include mq(sp) {
+        margin-left: 50%;
+    }
+  }
+
+  .nav-links li:nth-child(even) {
+    background-color: #F58B05;
+    transform: rotate(14deg);
+    box-shadow: 0 4px 0 #784503;
+    @include mq(sp) {
+        margin-right: 50%;
+    }
+  }
+
+  .nav-links li:nth-child(odd):hover {
+    transform: translateY(4px) rotate(-14deg);
+    box-shadow: none;
+  }
+
+  .nav-links li:nth-child(even):hover {
+  transform: translateY(4px) rotate(14deg);
+  box-shadow: none;
+}
+
+
+  .nav-links a {
+    color: #fff;
+    @include mq(sp) {
+        color: #fff;
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+  }
+
+  .hamburger.active span:nth-child(1) {
+    @include mq(sp) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+}
+
+.hamburger.active span:nth-child(2) {
+    @include mq(sp) {
+        opacity: 0;
+    }
+}
+
+.hamburger.active span:nth-child(3) {
+    @include mq(sp) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}
+
+/* 体験向上（任意）：メニュー表示中はボディスクロールを止める */
+.body--lock {
+    @include mq(sp) {
+        overflow: hidden;
+    }
+}
+// /* --- レスポンシブ時 --- */
+// @media (max-width: 768px) {
+//   /* ボタンを最前面に固定配置 */
+//   .hamburger {
+//     display: flex;
+//     position: fixed;
+//     top: 16px;
+//     right: 16px;
+//     z-index: 1002; /* メニューより前面 */
+//   }
+
+//   /* フルスクリーンのオーバーレイメニュー */
+//   .nav-links {
+//     position: fixed;
+//     inset: 0; /* top:0; right:0; bottom:0; left:0; と同義 */
+//     background: rgba(0,0,0,0.9);
+//     z-index: 1000; /* ボタンより背面にする */
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 2rem;
+
+//     /* 上から隠してスライドイン */
+//     transform: translateY(-100%);
+//     transition: transform 0.4s ease-in-out;
+
+//     /* スクロールを防ぎ、リンク以外のクリックは透過させない（デフォルトのまま） */
+//   }
+
+//   .nav-links.active {
+//     transform: translateY(0);
+//   }
+
+//   .nav-links a {
+//     color: #fff;
+//     font-size: 1.5rem;
+//     text-decoration: none;
+//   }
+// }
+
+// /* --- ハンバーガーを「×」に変形 --- */
+// .hamburger.active span:nth-child(1) {
+//   transform: rotate(45deg) translate(5px, 5px);
+// }
+// .hamburger.active span:nth-child(2) {
+//   opacity: 0;
+// }
+// .hamburger.active span:nth-child(3) {
+//   transform: rotate(-45deg) translate(6px, -6px);
+// }
+
+// /* 体験向上（任意）：メニュー表示中はボディスクロールを止める */
+// .body--lock {
+//   overflow: hidden;
+// }

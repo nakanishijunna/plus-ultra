@@ -15,9 +15,8 @@
   height: 100vh;
   padding: 5%;
   @include mq(sp) {
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    z-index: 9999;
+    height: initial;
+    padding: 0;
   }
 }
 
