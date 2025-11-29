@@ -3,7 +3,6 @@
 @import 'component/component';
 // ここに各ページのscssを追加
 @import 'layout';
-@import 'about';
 @import 'component/header';
 @import 'component/footer';
 @import 'question';
@@ -14,3 +13,4 @@
 @import 'component/voice';
 @import 'counseling';
 @import 'component/editor';
+@import 'component/modal';

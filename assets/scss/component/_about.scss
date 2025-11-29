@@ -1,6 +1,5 @@
 .p-about {
     padding-inline: 2.8125rem;
-    width: 27.5rem;
 }
 
 /*最初は表示させない*/
@@ -65,6 +64,7 @@
 
 .p-about__text span {
     position: relative;
+
 }
 
 .p-about__text span::before {
