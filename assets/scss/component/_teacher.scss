@@ -1,0 +1,103 @@
+.content {
+  padding: 0 1.25rem;
+  line-height: 1.7;
+}
+
+.p-teacher__box {
+  margin-top: 60px;
+  border: 2px solid #50a0ff;
+  text-align: center;
+  color: #fff;
+}
+
+.p-teacher__catch {
+    text-align: center;
+}
+
+/* flip card 基本設定 */
+.p-teacher__box {
+  width: 21rem;
+  height: 18.625rem;
+  perspective: 1000px; /* 3D効果を出すための奥行き */
+  margin: 40px auto;
+  border-radius: 8px;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+/* ホバー時に下から上へ回転 */
+.p-teacher__box:hover .flip-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* 裏面を隠す */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  border: 2px solid #50a0ff;
+  border-radius: 8px;
+}
+
+/* 表面 */
+.flip-front {
+    background-size: cover;
+  color: #3C4043;
+}
+
+/* 裏面（下から上へ回転して表示） */
+.flip-back {
+    background-size: cover;
+  color: #3C4043;
+  transform: rotateX(180deg);
+}
+
+.flip-image1 {
+    background-image: url(../../../img/teacher1.jpg);
+}
+.flip-image2 {
+    background-image: url(../../../img/teacher2.jpg);
+}
+.flip-image3 {
+    background-image: url(../../../img/teacher3.jpg);
+}
+
+.p-teacher__name {
+    color: #7FBBDD;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+.p-teacher__text {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(179, 226, 245, 0.7);
+    text-align: left;
+}
+
+.p-teacher__mask {
+    background-color: rgba(179, 226, 245, 0.7);
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 5px;
+    text-align: left;
+}
