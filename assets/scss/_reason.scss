@@ -58,7 +58,6 @@
 
     p {
       padding-block: 0.8rem;
-      font-size: 0.625rem;
       @include mq(tab) {
         font-size: 20%;
       }
