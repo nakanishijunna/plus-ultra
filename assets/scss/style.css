@@ -105,7 +105,7 @@ body {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
-    object-fit: cover;
+     object-fit: cover;
 }
 
 /* ハンバーガーボタン（共通） */
@@ -628,13 +628,16 @@ body {
   text-align: center;
   padding-top: 20px;
 }
+
 .section-title h2 {
   padding-right: 40px;
 }
+
 .section-title h2 span {
   color: green;
   font-size: larger;
 }
+
 .section-title p {
   font-size: 13px;
 }
@@ -643,6 +646,44 @@ body {
   margin-inline: 20px;
 }
 
+/* --------------------------------- */
+/* ===========================================================
+    ＋ → － アニメーション
+=========================================================== */
+/* 横線（＋の横棒） */
+.step-box-head .icon {
+  position: relative;
+  width: 22px;
+  height: 2px;
+  background: #000;
+  margin-left: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* 縦線（＋の縦棒） */
+.step-box-head .icon::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 22px;
+  background: #000;
+  top: -10px;
+  left: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* ▼ open 時 → 縦棒が消えて － だけになる */
+/* JSで開閉するため、以下の[open]セレクタはJSの .open クラスに置き換わります */
+/* ===========================================================
+    アコーディオン本体のスライド＋フェードアニメーション
+=========================================================== */
+/* JavaScriptで初期状態を制御するため、CSSによるmax-height:0の初期設定は削除します。
+.step-box-body には max-height:0, opacity:0 が残っている想定で、JSで上書きします。
+代わりに、[open]時（JSで.openが付与される時）のスタイルを定義します。 */
+/* ▼ open 時のアニメーション (JSにより .step_box.open が付与されると発火) */
+/* .step_box[open] .step1-box-body, .step_box[open] .step2-box-body, ... は削除し、
+   JSが .step_box.open クラスを使って制御するようにします。 */
+/* / * step1----------------------- */
 /* --- アコーディオン全体 --- */
 .step-box {
   border-bottom: 1px solid #ddd;
@@ -668,7 +709,9 @@ body {
 }
 
 /* 左側のテキスト欄 */
-.step-box-head .step {
+.step-box-head .step,
+.step-box-head .title {
+  /* titleクラスにも対応 */
   color: #333;
 }
 
@@ -688,16 +731,7 @@ body {
 }
 
 /* 閉じている時 → ＋ になる */
-.step-box:not([open]) .icon::after {
-  content: "";
-  width: 2px;
-  height: 22px;
-  background: #000;
-  position: absolute;
-  top: -10px;
-  left: 10px;
-}
-
+/* JSで制御するため、このCSSはアイコンアニメーションの初期状態（閉じている状態）として機能します */
 /* --- 開いたときの中身 --- */
 .step-box-body {
   background: #fff;
@@ -726,12 +760,14 @@ body {
   position: relative;
   z-index: 2;
 }
+
 .step-box-inner h3 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 15px;
   line-height: 1.6;
 }
+
 .step-box-inner p {
   font-size: 15px;
   line-height: 1.9;
@@ -739,12 +775,15 @@ body {
 }
 
 /* step1~step5開きMENU */
-/* step-box-body: 背景画像と高さを設定し、Flexboxで内側コンテンツを中央寄せ */
+/* max-heightの代わりに height の固定値が指定されているため、JSの max-height 制御と競合する可能性があります。
+   コンテンツ量が変わる場合は min-height に変更することを推奨しますが、元のコードを維持します。 */
 .step1-box-body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 300px;
+  display: flex;
+  /* flexを追加し、元のコードの意図を再現 */
   justify-content: center;
   align-items: center;
   padding: 25px 15px;
@@ -753,18 +792,18 @@ body {
 
 .step2-box-body {
   height: 340px;
-  justify-content: center;
-  align-items: center;
-  padding: 25px 15px;
-  margin-top: 15px;
+  background: linear-gradient(180deg, #e0e7ff 0%, #c4d0ff 100%);
+  /* 不要なコメントアウトは削除 */
 }
 
 .step3-box-body {
-  height: 650px;
+  height: 680px;
+  /* display: flex; を削除。Flexboxを内側コンテンツに適用する方が自然 */
   justify-content: center;
   align-items: center;
   padding: 25px 15px;
   margin-top: 15px;
+  background-color: cornsilk;
 }
 
 .step4-box-body {
@@ -781,13 +820,13 @@ body {
   align-items: center;
   padding: 25px 15px;
   margin-top: 15px;
+  background-image: url(imgUnion.png);
 }
 
 .step-box-inner {
   text-align: center;
   padding: 20px;
   z-index: 1;
-  /* オーバーレイを使う場合はテキストを前面に */
 }
 
 /* h3: 見出しのスタイル */
@@ -798,7 +837,6 @@ body {
   line-height: 1.6;
   margin-top: 0;
   margin-bottom: 30px;
-  /* フォントの指定（画像はゴシック系に近い） */
   font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
 }
 
@@ -808,27 +846,17 @@ body {
   font-size: 16px;
   line-height: 2.2;
   margin: 0;
-  /* フォントの指定 */
   font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
 }
 
 /* step2開きMENU */
 /* step-box-content: グラデーション背景と中央寄せ */
 .step-box-content {
-  /* 画像の淡い青紫のグラデーションを再現 */
-  background: linear-gradient(180deg, #e0e7ff 0%, #c4d0ff 100%);
-  /* 必要な幅を設定（例: 90%または固定幅） */
-  width: 320px;
-  /* コンテンツを中央に配置 */
+  border-top: 10px solid #2196F3;
   text-align: center;
-  padding: 30px 20px;
-  /* 上下左右のパディング */
-  /* 必要に応じて角を丸くする */
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* フォントの基本設定 */
+  padding-top: 30px;
+  margin: 0 auto;
   font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-  /* 区切り線を疑似要素で追加するための準備 */
   position: relative;
 }
 
@@ -843,15 +871,7 @@ body {
 
 /* money: 価格全体 */
 .step-box-content .money {
-  /* 「総額」と「円」の部分のスタイル */
-  color: #2196F3;
-  font-size: 18px;
-  font-weight: normal;
-  margin: 0;
-}
-
-.step-box-content .money {
-  color: #1565C0;
+  color: #04bdfa;
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -870,18 +890,21 @@ body {
 .step-box-content .btn {
   display: inline-block;
   text-decoration: none;
-  color: #1976D2;
+  color: #04bdfa;
   font-weight: bold;
   font-size: 16px;
   padding: 15px 1px;
   border-radius: 50px;
   border: 2px solid;
   background-color: white;
+  width: 350px;
+  transition: 0.5s;
+  /* :hover のトランジションを外に出す */
 }
+
 .step-box-content .btn:hover {
   color: white;
   background-color: #1976D2;
-  transition: 0.5s;
 }
 
 /* step3 */
@@ -893,7 +916,6 @@ body {
 }
 
 /* 見出し */
-/* 上のタイトル部分 */
 .step-box-curriculums h3 {
   font-size: 20px;
   font-weight: 700;
@@ -933,6 +955,7 @@ body {
   margin-top: 20px;
   align-items: center;
   padding-right: 19%;
+  padding-left: 63px;
 }
 
 .curriculums {
@@ -943,6 +966,7 @@ body {
   border-radius: 22px;
   margin-top: 20px;
   align-items: center;
+  padding-left: 63px;
 }
 
 /* 左の数字（1・2・3） */
@@ -1005,15 +1029,19 @@ body {
   display: flex;
   text-align: center;
 }
-.point point p {
+
+/* 不正なセレクタ "point p" を修正 */
+.point p {
   font-size: 10px;
   text-align: left;
   margin: 35px 10px 0 10px;
 }
-.point point p span {
+
+.point p span {
   font-size: 12px;
   font-weight: bold;
 }
+
 .point-text {
   width: 50%;
 }
@@ -1038,17 +1066,86 @@ body {
 .support {
   border: 5px solid rgba(255, 201, 99, 0.963);
 }
+
 .support-text {
   margin: 8px;
   font-size: 15px;
 }
-.support .support-content {
+
+.support-text .support-content {
   font-size: 16px;
   font-weight: bold;
 }
 
-.icon {
+.icons {
   width: 50px;
+}
+
+/* ================================
+    step5 デザイン（画像に完全合わせ）
+================================ */
+.step5-box-body {
+  height: auto;
+  padding: 40px 15px;
+  background: linear-gradient(180deg, #f7fafc 0%, #e3eff4 100%);
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* 背景の薄い模様 */
+.step5-box-body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("img/Union.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+  z-index: 1;
+}
+
+/* 中のテキスト */
+.step5-box-body .step-box-inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 370px;
+  margin: 0 auto;
+}
+
+/* 大見出し */
+.step5-box-body .step-box-inner h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* サブ見出し（上の行） */
+.step5-box-body .sub-title-top {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 5px;
+  line-height: 1.6;
+}
+
+/* サブ見出し（下の行：強調） */
+.step5-box-body .sub-title-bottom {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ff9800;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* 説明文 */
+.step5-box-body p {
+  color: #333;
+  font-size: 14px;
+  line-height: 2;
+  margin-top: 15px;
 }
 
 .p-about {

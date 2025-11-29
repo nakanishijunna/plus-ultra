@@ -1,4 +1,4 @@
-// @use 'mixin' as m;
+@use 'mixin' as m;
 
 
 html {
@@ -28,7 +28,7 @@ body {
     width: 440px;
     margin: 0 auto;
     padding-bottom: 50px;
-    background-color: #FFF6D8;
+    background-color: bisque;
 }
 
 .section-title {
@@ -228,7 +228,7 @@ body {
     align-items: center;
     padding: 25px 15px;
     margin-top: 15px;
-    background-image: url('img/step1.png');
+    background-image: url("img/step1.png");
 }
 
 .step2-box-body {
@@ -250,7 +250,7 @@ body {
 }
 
 .step4-box-body {
-    height: 830px;
+    height: 920px;
     justify-content: center;
     align-items: center;
     padding: 25px 15px;
@@ -264,8 +264,7 @@ body {
     align-items: center;
     padding: 25px 15px;
     margin-top: 15px;
-    background-image: url("img/step5.png");
-    background-position: left top;
+    background-image: url("img\Union.png");
 }
 
 .step-box-inner {
@@ -277,33 +276,24 @@ body {
 
 /* h3: 見出しのスタイル */
 .step-box-inner h3 {
+    color: #000000;
     font-size: 26px;
     font-weight: bold;
     line-height: 1.6;
     margin-top: 0;
     margin-bottom: 30px;
+    /* フォントの指定（画像はゴシック系に近い） */
     font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
-    color: #000;
-
-    span {
-        display: inline-block; // 文字幅に合わせる
-        border-bottom: 7px solid #04bdfa; // 青い下線
-        line-height: 0.3; // 下線を文字に近づける
-        padding-bottom: 2px; // 下線と文字の間隔
-    }
 }
 
+/* p: 本文のスタイル */
 .step-box-inner p {
-    font-size: 17px;
-    line-height: 2;
+    color: #000000;
+    font-size: 16px;
+    line-height: 2.2;
     margin: 0;
+    /* フォントの指定 */
     font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
-    color: #333;
-
-    span {
-        color: #ffb53b; // 画像の黄色の強調部分
-        font-weight: bold;
-    }
 }
 
 
@@ -493,15 +483,10 @@ body {
 
 .step-box-pointer h3 {
     font-size: 20px;
-    line-height: 40px;
 }
 
 .step-box-pointer h3 span {
     font-size: 32px;
-    display: inline-block; // 文字幅に合わせる
-    border-bottom: 7px solid greenyellow; // 青い下線
-    line-height: 0.3; // 下線を文字に近づける
-    padding-bottom: 2px; // 下線と文字の間隔
 }
 
 .step-box-pointer p {
@@ -512,7 +497,6 @@ body {
 .point {
     display: flex;
     text-align: center;
-    font-size: 14px;
 
     point p {
         font-size: 10px;
@@ -530,21 +514,10 @@ body {
     }
 }
 
-.get {
-    padding-top: 17px;
-    text-align: left;
-    padding-inline: 10px;
-}
-
 .point-content {
     border: 2px solid #2196F3;
     border-radius: 15px;
     margin-bottom: 1px;
-    background-color: white;
-
-    & p span {
-        font-weight: bold;
-    }
 }
 
 .point-contents {
@@ -564,7 +537,6 @@ body {
     &-text {
         margin: 8px;
         font-size: 15px;
-        background-color: white;
     }
 
     .support-content {
@@ -578,7 +550,7 @@ body {
 }
 
 /* ================================
-step5 デザイン（画像に完全合わせ）
+   step5 デザイン（画像に完全合わせ）
 ================================ */
 
 .step5-box-body {
@@ -588,7 +560,6 @@ step5 デザイン（画像に完全合わせ）
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    // background-image: url("img/step5.png");
 }
 
 /* 背景の薄い模様 */
@@ -596,6 +567,9 @@ step5 デザイン（画像に完全合わせ）
     content: "";
     position: absolute;
     inset: 0;
+    background-image: url("img/Union.png");
+    background-size: cover;
+    background-position: center;
     opacity: 0.18;
     /* 画像の薄さに合わせた値 */
     z-index: 1;
@@ -638,26 +612,6 @@ step5 デザイン（画像に完全合わせ）
 }
 
 /* 説明文 */
-.step-box-start {
-    text-align: center;
-
-    & h3 {
-        font-size: 26px;
-        font-weight: bold;
-    }
-
-    .lost {
-        font-size: 24px;
-        font-weight: bold;
-
-
-        & span {
-            color: #ffb53b;
-            margin-right: 40px;
-        }
-    }
-}
-
 .step5-box-body p {
     color: #333;
     font-size: 14px;
