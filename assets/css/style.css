@@ -714,26 +714,42 @@ body {
   background-size: contain;
 }
 
-.inner {
-  width: 440px;
+html {
+  font-size: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  width: 100%;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
   margin: 0 auto;
   padding-bottom: 50px;
+  background-color: bisque;
 }
 
 .section-title {
   text-align: center;
-  padding: 30px 0;
+  padding-top: 20px;
 }
-
 .section-title h2 {
   padding-right: 40px;
 }
-
 .section-title h2 span {
   color: green;
   font-size: larger;
 }
-
 .section-title p {
   font-size: 13px;
 }
@@ -742,7 +758,6 @@ body {
   margin-inline: 20px;
 }
 
-/* --------------------------------- */
 /* ===========================================================
     ＋ → － アニメーション
 =========================================================== */
@@ -803,7 +818,6 @@ body {
   opacity: 1;
 }
 
-/* / * step1----------------------- */
 /* --- アコーディオン全体 --- */
 .step-box {
   border-bottom: 1px solid #ddd;
@@ -819,8 +833,8 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   cursor: pointer;
-  padding: 20px 20px;
-  margin-inline: -20px;
+  padding: 5px 0 3px;
+  margin-inline: 15px;
 }
 
 /* Webkitのマーカー削除 */
@@ -846,7 +860,7 @@ body {
   margin-top: 30px;
   position: relative;
   transition: 0.2s;
-  top: 0px;
+  top: 10px;
 }
 
 /* 閉じている時 → ＋ になる */
@@ -886,16 +900,13 @@ body {
 /* テキスト本体 */
 .step-box-inner {
   position: relative;
-  z-index: 2;
 }
-
 .step-box-inner h3 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 15px;
   line-height: 1.6;
 }
-
 .step-box-inner p {
   font-size: 15px;
   line-height: 1.9;
@@ -908,9 +919,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: auto;
-  /* Flexboxプロパティをstep1-box-bodyに適用 (step-box-innerへ移しても良い) */
-  display: flex;
+  height: 300px;
   justify-content: center;
   align-items: center;
   padding: 25px 15px;
@@ -919,13 +928,12 @@ body {
 }
 
 .step2-box-body {
-  height: auto;
+  height: 340px;
   background: linear-gradient(180deg, #e0e7ff 0%, #c4d0ff 100%);
 }
 
 .step3-box-body {
-  height: auto;
-  /* display: flex; ではないため削除 */
+  height: 680px;
   justify-content: center;
   align-items: center;
   padding: 25px 15px;
@@ -934,7 +942,7 @@ body {
 }
 
 .step4-box-body {
-  height: auto;
+  height: 920px;
   justify-content: center;
   align-items: center;
   padding: 25px 15px;
@@ -943,12 +951,12 @@ body {
 }
 
 .step5-box-body {
-  height: auto;
+  height: 350px;
   justify-content: center;
   align-items: center;
   padding: 25px 15px;
   margin-top: 15px;
-  background-image: url("../../img/Union.png");
+  background-image: url("imgUnion.png");
 }
 
 .step-box-inner {
@@ -978,20 +986,12 @@ body {
   margin: 0;
   /* フォントの指定 */
   font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-  color: #333;
-}
-
-.step-box-inner p span {
-  color: #ffb53b;
-  /* 画像の黄色の強調部分 */
-  font-weight: bold;
 }
 
 /* step2開きMENU */
 /* step-box-content: グラデーション背景と中央寄せ */
 .step-box-content {
   /* 画像の淡い青紫のグラデーションを再現 */
-  /* background: linear-gradient(180deg, #e0e7ff 0%, #c4d0ff 100%); */
   border-top: 10px solid #2196F3;
   /* 必要な幅を設定（例: 90%または固定幅） */
   /* コンテンツを中央に配置 */
@@ -1000,8 +1000,6 @@ body {
   /* 上下左右のパディング */
   margin: 0 auto;
   /* 必要に応じて角を丸くする */
-  /* border-radius: 5px; */
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   /* フォントの基本設定 */
   font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   /* 区切り線を疑似要素で追加するための準備 */
@@ -1018,6 +1016,14 @@ body {
 }
 
 /* money: 価格全体 */
+.step-box-content .money {
+  /* 「総額」と「円」の部分のスタイル */
+  color: #2196F3;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0;
+}
+
 .step-box-content .money {
   color: #04bdfa;
   font-size: 40px;
@@ -1041,14 +1047,12 @@ body {
   color: #04bdfa;
   font-weight: bold;
   font-size: 16px;
-  padding: 15px 100px;
+  padding: 15px 1px;
   border-radius: 50px;
   border: 2px solid;
   background-color: white;
-  max-width: 350px;
-  margin-bottom: 30px;
+  width: 350px;
 }
-
 .step-box-content .btn:hover {
   color: white;
   background-color: #1976D2;
@@ -1163,19 +1167,10 @@ body {
 
 .step-box-pointer h3 {
   font-size: 20px;
-  line-height: 40px;
 }
 
 .step-box-pointer h3 span {
   font-size: 32px;
-  display: inline-block;
-  /* 文字幅に合わせる */
-  border-bottom: 7px solid greenyellow;
-  /* 青い下線 */
-  line-height: 0.3;
-  /* 下線を文字に近づける */
-  padding-bottom: 2px;
-  /* 下線と文字の間隔 */
 }
 
 .step-box-pointer p {
@@ -1186,40 +1181,24 @@ body {
 .point {
   display: flex;
   text-align: center;
-  font-size: 14px;
 }
-
-/* .point p の入れ子を修正 */
-.point .point-contents p {
-  font-size: 20px;
-  text-align: center;
-  /* margin: 20px 0; */
+.point point p {
+  font-size: 10px;
+  text-align: left;
+  margin: 35px 10px 0 10px;
 }
-
-.point .point-contents p span {
+.point point p span {
   font-size: 12px;
   font-weight: bold;
 }
-
 .point-text {
   width: 50%;
-}
-
-.get {
-  padding-top: 8px;
-  text-align: left;
-  padding-inline: 10px;
 }
 
 .point-content {
   border: 2px solid #2196F3;
   border-radius: 15px;
   margin-bottom: 1px;
-  background-color: white;
-}
-
-.point-content p span {
-  font-weight: bold;
 }
 
 .point-contents {
@@ -1228,7 +1207,7 @@ body {
 
 .points {
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   color: #2196F3;
 }
@@ -1236,24 +1215,21 @@ body {
 .support {
   border: 5px solid rgba(255, 201, 99, 0.963);
 }
-
 .support-text {
   margin: 8px;
   font-size: 15px;
-  background-color: white;
 }
-
-.support-text .support-content {
+.support .support-content {
   font-size: 16px;
   font-weight: bold;
 }
 
 .icons {
-  width: 70px;
+  width: 50px;
 }
 
 /* ================================
-step5 デザイン（画像に完全合わせ）
+   step5 デザイン（画像に完全合わせ）
 ================================ */
 .step5-box-body {
   height: auto;
@@ -1262,7 +1238,6 @@ step5 デザイン（画像に完全合わせ）
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  /* background-image: url("img/step5.png"); */
 }
 
 /* 背景の薄い模様 */
@@ -1315,32 +1290,11 @@ step5 デザイン（画像に完全合わせ）
 }
 
 /* 説明文 */
-.step-box-start {
-  text-align: center;
-}
-
-.step-box-start h3 {
-  font-size: 26px;
-  font-weight: bold;
-}
-
-.step-box-start .lost {
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.step-box-start .lost span {
-  color: #ffb53b;
-  margin-right: 40px;
-}
-
 .step5-box-body p {
   color: #333;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 2;
   margin-top: 15px;
-  text-align: center;
 }
 
 .p-about {
