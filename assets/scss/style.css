@@ -386,22 +386,12 @@ body {
     display: none !important;
   }
 }
-body {
-  color: #3C4043;
-}
-
-footer p {
-  background-color: #7FBBDD;
-  color: #fff;
-  text-align: center;
-  padding: 1.5rem;
-  font-size: 0.625rem;
-}
-
 .question {
   padding: 30px 0 50px;
-  background-color: rgba(255, 194, 47, 0.2);
   /*paddingの設定*/
+}
+.question .wrapper {
+  background-color: rgba(255, 194, 47, 0.2);
 }
 .question .title h2::before {
   top: 0;
@@ -526,7 +516,7 @@ footer p {
 .p-empathy__answer-inner {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 65%;
   margin-inline: auto;
 }
 .p-empathy__answer-reading {
@@ -1363,7 +1353,6 @@ step5 デザイン（画像に完全合わせ）
 
 .p-about {
   padding-inline: 2.8125rem;
-  padding-bottom: 5rem;
 }
 
 /*最初は表示させない*/
@@ -1425,17 +1414,17 @@ step5 デザイン（画像に完全合わせ）
   padding-bottom: 0.625rem;
 }
 
-.marker {
-  background: linear-gradient(to right, rgba(255, 153, 0, 0.5) 0%, rgba(255, 153, 0, 0.5) 100%);
-  background-size: 0% 50%;
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  transition: background-size 0.8s ease-out;
-  display: inline-block; /* ★ inline → inline-block に */
+.p-about__text span {
+  position: relative;
 }
 
-.marker.on {
-  background-size: 100% 40%; /* ★ 左→右へ伸びる */
+.p-about__text span::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  height: 8px;
+  background-color: rgba(255, 194, 47, 0.59);
 }
 
 .p-about__image {
@@ -1452,6 +1441,7 @@ step5 デザイン（画像に完全合わせ）
 .p-voice {
   background-color: rgba(255, 194, 47, 0.3);
   padding-block: 3.75rem;
+  width: 27.5rem;
   margin-inline: auto;
 }
 
@@ -1481,13 +1471,13 @@ step5 デザイン（画像に完全合わせ）
 .p-voice__box {
   flex: 1;
   background-color: #fff;
-  width: 90%;
+  width: 21.875rem;
   padding: 1rem;
   border-radius: 50px 0;
   margin-bottom: 1.5625rem;
   box-shadow: 1px 3px 5px 1px rgba(60, 64, 67, 0.5);
   position: sticky;
-  top: 0rem; /*固定開始位置*/
+  top: 10rem; /*固定開始位置*/
   z-index: 1;
 }
 
@@ -1548,10 +1538,41 @@ step5 デザイン（画像に完全合わせ）
   padding-bottom: 1rem;
 }
 
+.g__counseling.g__counseling__pc {
+  display: block;
+}
+@media (max-width: 768px) {
+  .g__counseling.g__counseling__pc {
+    display: none;
+  }
+}
+
+.g__counseling.g__counseling__tab {
+  display: none;
+}
+@media (max-width: 768px) {
+  .g__counseling.g__counseling__tab {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1000;
+  }
+  .g__counseling.g__counseling__tab .g__counseling__reserve,
+  .g__counseling.g__counseling__tab .g__counseling__line {
+    flex: 0 0 50%;
+  }
+}
+
 .g__counseling__container {
   display: flex;
+  max-width: 600px;
   width: 100%;
   height: 13vh;
+  margin: auto;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1562,17 +1583,6 @@ step5 デザイン（画像に完全合わせ）
 @media (max-width: 830px) {
   .g__counseling__container {
     height: 12vh;
-  }
-}
-@media (max-width: 600px) {
-  .g__counseling__container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: auto;
-    z-index: 1000;
   }
 }
 .g__counseling__container img {
@@ -1600,6 +1610,11 @@ step5 デザイン（画像に完全合わせ）
   padding: 10px 5px;
   background-color: #FFC22F;
   z-index: 1;
+}
+@media (max-width: 768px) {
+  .g__counseling__reserve {
+    flex-basis: 50%;
+  }
 }
 .g__counseling__reserve h3 {
   margin-bottom: 5px;
@@ -1650,9 +1665,14 @@ step5 デザイン（画像に完全合わせ）
   overflow: hidden;
   flex-basis: 45%;
   height: 100%;
-  padding: 5%;
+  padding: 10px 5px;
   background-color: #07B53B;
   z-index: 1;
+}
+@media (max-width: 768px) {
+  .g__counseling__line {
+    flex-basis: 50%;
+  }
 }
 .g__counseling__line h3 {
   margin-bottom: 5px;
@@ -1817,7 +1837,7 @@ step5 デザイン（画像に完全合わせ）
 .floating-links {
   position: fixed;
   bottom: 20px;
-  right: 50px;
+  right: 20px;
   display: none;
   flex-direction: column-reverse;
   gap: 10px;
@@ -2231,103 +2251,4 @@ step5 デザイン（画像に完全合わせ）
 .cursor-stalker.is-teacher-hover .label {
   opacity: 1;
   font-size: 12px;
-}
-
-/* HERO ========================= */
-.hero {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1000;
-}
-
-.bg-video {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-}
-
-.bg-video video {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-/* 中央コンテンツ */
-.hero-inner {
-  height: auto;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* 最初は非表示（透明ではなくdisplay:noneで消す） */
-.normal-section.hidden {
-  display: none;
-  opacity: 0;
-}
-
-/* 手書きロゴ */
-#logoSVG path {
-  stroke: #7FBBDD;
-  stroke-width: 5;
-  fill: transparent;
-}
-
-/* テキスト */
-.hero-tagline {
-  font-size: 28px;
-  margin-top: -150px;
-  color: #fff;
-  text-shadow: 3px 3px 2px #7FBBDD;
-}
-
-.hero-sub {
-  font-size: 18px;
-  opacity: 0.85;
-  color: #fff;
-  text-shadow: 3px 3px 2px #7FBBDD;
-}
-
-/* ← 矢印 ============================== */
-.drag-area {
-  margin-top: 10px;
-  width: 140px;
-  height: 40px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-/* ← の “く” の部分 */
-.arrow-head {
-  width: 20px;
-  height: 20px;
-  border-left: 5px solid #F58B05;
-  border-bottom: 5px solid #333;
-  transform: rotate(45deg);
-  margin-right: 6px;
-  opacity: 0.85;
-}
-
-/* ← の ——— 棒部分 */
-.arrow-body {
-  height: 5px;
-  width: 80px; /* 初期状態：短い */
-  background: #F58B05;
-  transition: width 0.1s linear;
-  opacity: 0.9;
-  margin-left: -10px;
-}
-
-/* 通常セクション ======================= */
-.normal-section {
-  min-height: 100vh;
-  padding: 100px 24px;
-  /* background: #111; */
 }/*# sourceMappingURL=style.css.map */
