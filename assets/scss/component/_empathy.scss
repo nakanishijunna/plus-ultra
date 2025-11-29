@@ -1,6 +1,5 @@
-
 .p-empathy {
-    width: 100%;
+  width: 100%;
 }
 
 .p-empathy__reading-wrapper {
@@ -22,92 +21,98 @@
 }
 
 .p-empathy__worries__wrapper {
-    background-image: url(../../../img/worries-bg.jpg);
-    background-position: center;
-    background-size: cover;
-    padding-block: 20rem 3rem;
-    margin-top: -2rem;
-    position: relative;
-    z-index: -5;
+  background-image: url(../../../img/worries-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-block: 20rem 3rem;
+  margin-top: -2rem;
+  position: relative;
+  z-index: -5;
 }
 
 .p-empathy__worries-lists {
-    padding-inline: 3.125rem;
+  padding-inline: 3.125rem;
 }
 
 .p-empathy__worries-list {
-    background-color: #ffffff;
-    font-size: 0.75rem;
-    padding: 0.5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: fit-content;
-    margin-bottom: 1rem;
-    border-radius: 0.625rem;
-    box-shadow: 1px 5px 5px -2px #3C4043;
+  background-color: #ffffff;
+  font-size: 0.75rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: fit-content;
+  margin-bottom: 1rem;
+  border-radius: 0.625rem;
+  box-shadow: 1px 5px 5px -2px #3c4043;
 }
 
 .p-empathy__worries-lists .p-empathy__worries-list:nth-of-type(odd) {
-    margin-right: auto;
-    @include mq(sp) {
-        margin-left: 30%;
-    }
+  margin-right: auto;
+  @include mq(tab) {
+  }
 }
 
 .p-empathy__worries-lists .p-empathy__worries-list:nth-of-type(even) {
-    margin-left: auto;
-    @include mq(sp) {
-        margin-right: 30%;
-    }
+  margin-left: auto;
+  @include mq(tab) {
+  }
 }
 
 .p-empathy__answer-wrapper {
-    background-image: url(../../../img/answer-bg.jpg);
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    padding-block: 5rem;
+  background-image: url(../../../img/answer-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding-block: 5rem;
 }
 
 .p-empathy__answer-inner {
-    padding-inline: 15%;
-    @include mq(sp) {
-        padding-inline: 35%;
-    }
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  margin-inline: auto;
+  @include mq(tab) {
+  }
 }
 
 .p-empathy__answer-reading {
-    padding: 1rem 2rem;
-    background-image: linear-gradient(90deg, #ffc22f 30%, #ffde8d 52%, #ffc22f 70%);
-    color: #ffffff;
-    border-radius: 0.625rem;
-    margin-bottom: 2rem;
+  padding: 0.5rem;
+  background-image: linear-gradient(
+    90deg,
+    #ffc22f 30%,
+    #ffde8d 52%,
+    #ffc22f 70%
+  );
+  color: #ffffff;
+  border-radius: 0.625rem;
+  margin-bottom: 2rem;
 }
 
 .p-empathy__answer-reading h2 {
-    text-shadow: 1px 2px 3px #3C4043;
+  text-shadow: 1px 2px 3px #3c4043;
 }
 
 .p-empathy__answer-lists {
-    background-color: #7FBBDD;
-    padding: 1rem 3.38rem;
-    text-align: left;
-    color: #ffffff;
-    border-radius: 0.625rem;
+  background-color: #7fbbdd;
+  text-align: left;
+  padding: 0.5rem;
+  color: #ffffff;
+  border-radius: 0.625rem;
+  display: inline-block;
 }
 
 .p-empathy__answer-list {
-    padding-bottom: 0.625rem;
+  padding-bottom: 0.625rem;
 }
 
 .p-empathy__answer-catch {
-    padding-top: 3rem;
-    padding-inline: 3.125rem;
-    font-size: 1.25rem;
+  padding-top: 3rem;
+  padding-inline: 1rem;
+  font-size: 1.25rem;
 }
 
 .p-empathy__answer-catch span {
-    color: #F58B05;
-    font-weight: 600;
+  color: #f58b05;
+  font-weight: 600;
 }
