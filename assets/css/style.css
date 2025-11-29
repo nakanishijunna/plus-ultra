@@ -610,11 +610,11 @@ body {
 }
 .grid-box .grid-item p {
   padding-block: 0.8rem;
-  font-size: 0.625rem;
+  font-size: 1.5vw;
 }
 @media (max-width: 768px) {
   .grid-box .grid-item p {
-    font-size: 20%;
+    font-size: 16px;
   }
 }
 .grid-box .grid-item:nth-child(2n) {
@@ -623,32 +623,29 @@ body {
 
 .mask {
   display: none;
+}
+
+.open .mask {
+  width: 100%;
+  height: 100%;
+  display: block;
   position: fixed;
-  inset: 0;
-  justify-content: center;
-  align-items: center;
+  top: 0;
+  left: 0;
+  opacity: 1;
   background: rgba(0, 0, 0, 0.8);
   transition: 0.5s;
   z-index: 30;
 }
-.mask.open {
-  display: block;
-}
 
 .mask-content {
-  display: none;
-  width: 90%;
-  max-width: 600px;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 400px;
   transition: 0.5s;
   z-index: 40;
-}
-.mask-content.show {
-  display: block;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
+  opacity: 0;
 }
 .mask-content h3 {
   margin-bottom: 30px;
@@ -657,6 +654,16 @@ body {
 }
 .mask-content p {
   text-align: left;
+}
+
+.show.mask-content {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  opacity: 1;
 }
 
 .reason-text {
