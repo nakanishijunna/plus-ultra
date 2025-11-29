@@ -1538,10 +1538,41 @@ step5 デザイン（画像に完全合わせ）
   padding-bottom: 1rem;
 }
 
+.g__counseling.g__counseling__pc {
+  display: block;
+}
+@media (max-width: 768px) {
+  .g__counseling.g__counseling__pc {
+    display: none;
+  }
+}
+
+.g__counseling.g__counseling__tab {
+  display: none;
+}
+@media (max-width: 768px) {
+  .g__counseling.g__counseling__tab {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1000;
+  }
+  .g__counseling.g__counseling__tab .g__counseling__reserve,
+  .g__counseling.g__counseling__tab .g__counseling__line {
+    flex: 0 0 50%;
+  }
+}
+
 .g__counseling__container {
   display: flex;
+  max-width: 600px;
   width: 100%;
   height: 13vh;
+  margin: auto;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1552,17 +1583,6 @@ step5 デザイン（画像に完全合わせ）
 @media (max-width: 830px) {
   .g__counseling__container {
     height: 12vh;
-  }
-}
-@media (max-width: 600px) {
-  .g__counseling__container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: auto;
-    z-index: 1000;
   }
 }
 .g__counseling__container img {
@@ -1590,6 +1610,11 @@ step5 デザイン（画像に完全合わせ）
   padding: 10px 5px;
   background-color: #FFC22F;
   z-index: 1;
+}
+@media (max-width: 768px) {
+  .g__counseling__reserve {
+    flex-basis: 50%;
+  }
 }
 .g__counseling__reserve h3 {
   margin-bottom: 5px;
@@ -1640,9 +1665,14 @@ step5 デザイン（画像に完全合わせ）
   overflow: hidden;
   flex-basis: 45%;
   height: 100%;
-  padding: 5%;
+  padding: 10px 5px;
   background-color: #07B53B;
   z-index: 1;
+}
+@media (max-width: 768px) {
+  .g__counseling__line {
+    flex-basis: 50%;
+  }
 }
 .g__counseling__line h3 {
   margin-bottom: 5px;
