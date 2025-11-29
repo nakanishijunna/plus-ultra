@@ -4,30 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/scss/style.css">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/scss/style.scss">
     <title>Document</title>
 </head>
 
-<body>
+<body class="body--lock">
+    <header class="p-header__sp">
+        <nav class="navbar">
+            <div class="p-header__wrapper">
+                <div class="p-header__logo">
+                    <a href="#">
+                        <img src="img/logo.png" alt="ProNavi">
+                    </a>
+                </div>
+
+                <!-- type="button" を明示、ARIAで状態を伝える -->
+                <button class="hamburger" id="hamburger" type="button" aria-label="メニュー" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#">Pronaviについて</a></li>
+                <li><a href="#">未来を変える<br>
+                        5つのステップ</a></li>
+                <li><a href="#">受講生の声</a></li>
+                <li><a href="#">受講生の実績</a></li>
+                <li><a href="#">Success Stories</a></li>
+                <li><a href="#">Q＆A</a></li>
+            </ul>
+        </nav>
+
     <div class="layout">
         <!-- 左のヘッダーの役割 -->
         <div class="left-col">
-            <header>
+            <header class="p-header__pc">
                 <nav class="navbar">
-                    <div class="p-header__logo">
-                        <a href="#">
-                            <img src="img/logo.png" alt="ProNavi">
-                        </a>
-                    </div>
+                    <div class="p-header__wrapper">
+                        <div class="p-header__logo">
+                            <a href="#">
+                                <img src="img/logo.png" alt="ProNavi">
+                            </a>
+                        </div>
 
-                    <!-- type="button" を明示、ARIAで状態を伝える -->
-                    <button class="hamburger" id="hamburger" type="button" aria-label="メニュー" aria-expanded="false">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+                        <!-- type="button" を明示、ARIAで状態を伝える -->
+                        <button class="hamburger" id="hamburger" type="button" aria-label="メニュー" aria-expanded="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
 
                     <ul class="nav-links" id="nav-links">
                         <li><a href="#">Pronaviについて</a></li>
@@ -43,6 +74,8 @@
         </div>
 
         <!-- 真ん中のメイン -->
+        <div class="mv">mainvisual</div>
+
         <div class="center-col">
             <section id="empathy" class="p-empathy">
                 <div class="p-empathy__reading-wrapper">
@@ -81,8 +114,33 @@
                 </div>
             </section>
 
-            <section id="reason">
+            <section id="about" class="p-about">
+                <div class="p-about__title title">
+                    <h2 data-en="ProNavi">
+                        "やってみたい"が、<br>
+                        "できる"に変わる場所
+                    </h2>
+                </div>
+                <div class="p-about__wrapper">
+                    <div class="p-about__text">
+                        <p>「在宅で働いてみたい」「副業を始めてみたい」「プログラミングを学んでみたい」<br>
+                            そんな<span>“やってみたい”</span>という気持ちを、私たちは何よりも大切にしています。</p>
+                        <p>このスクールは、<span>パソコン初心者〜初級者</span>の方でも安心して始められる、<span>オンライン完結型</span>のプログラミング学習サービスです。</p>
+                        <p>学習はすべて自分のペースで進められるから、忙しい方でも無理なく継続できます。<br>
+                            指導はM<span>現役エンジニア講師によるマンツーマン。</span>わからないことはすぐに相談できる環境が整っています。</p>
+                    </div>
+                    <div class="p-about__image">
+                        <img src="/img/about.jpg" alt="">
+                    </div>
+                    <div class="p-about__text">
+                        <p>カリキュラムは、未経験でも「できる」を実感できるよう設計されており、学習後は実際の案件に講師が同行してくれるサポートもあるため、学んだことをすぐに“仕事”に活かせます。</p>
+                        <p>「スクールが多すぎて、どこを選べばいいかわからない」――そんな方こそ、まずは私たちのカウンセリングで、あなたの<span>“やってみたい”</span>を整理してみませんか？</p>
+                        <p>一人ひとりの挑戦に、私たちは本気で向き合います。</p>
+                    </div>
+                </div>
+            </section>
 
+            <section id="reason">
                 <div class="reason-main">
                     <div class="wrapper">
                         <div class="title-box">
@@ -129,8 +187,6 @@
                                 <p>自社案件<br>紹介制度</p>
                             </div>
                         </div>
-
-                        <div class="mask"></div>
 
                         <div id="mask1" class="mask-content wrapper">
                             <h3>\ コーチング特化型 /</h3>
@@ -206,8 +262,15 @@
         </div>
         <!-- 右側の動画や疑似エディタを置くカラム -->
         <div class="right-col">
+            <div class="p-youtube">
+                <p>TV出演させていただき、<span>かかし・いるかの思い</span>を熱く語らせていただきました。</p>
+                <iframe width="200" height="100" src="https://www.youtube.com/embed/KFNc3nPTOAw?si=a1M-bxACzxY3EyCe"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
             <!-- 疑似エディタ -->
-            <section class="editor">
+            <section id="editor-section" class="editor">
                 <h2 class="editor__title">まずは動かしてみよう</h2>
                 <div class="editor__container">
                     <div class="editor__challenge">お題がここに表示されます</div>
@@ -233,12 +296,61 @@
             </section>
         </div>
     </div>
+
+    <!-- SP追従リンク -->
+    <div class="floating-links" id="floatingLinks">
+        <div class="floating-item" data-target="modal1">
+            <button class="floating-open">
+                <p>ええじゃないか出演！</p>
+                <div class="floating-image">
+                    <img src="img/kakashi-iruka.png" alt="">
+                </div>
+            </button>
+            <button class="floating-close floating-close-youtube">×</button>
+        </div>
+
+        <div class="floating-item" data-target="modal2">
+            <button class="floating-open floating-editor">コードを<br>
+                書いてみよう</button>
+            <button class="floating-close">×</button>
+        </div>
+    </div>
+
+    <!-- モーダル（セクション1） -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">×</button>
+            <!-- <h2>セクション1（モーダル）</h2>
+            <p>SPではモーダルで表示される内容。</p> -->
+            <div class="p-youtube">
+                <p>TV出演させていただき、<span>かかし・いるかの思い</span>を熱く語らせていただきました。</p>
+                <iframe width="200" height="100" src="https://www.youtube.com/embed/KFNc3nPTOAw?si=a1M-bxACzxY3EyCe"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- モーダル（セクション2） -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">×</button>
+            <!-- <h2>セクション2（モーダル）</h2>
+            <p>SPではモーダルで表示される内容。</p> -->
+            <div id="modal-editor-container"></div>
+        </div>
+    </div>
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="module" src="assets/js/modal.js"></script>
     <script src="/assets/js/hamburger.js"></script>
-    <script src="/plus-ultra/assets/js/reason.js"></script>
+    <script src="assets/js/reason.js"></script>
     <script type="module" src="assets/js/editor.js"></script>
 </body>
 

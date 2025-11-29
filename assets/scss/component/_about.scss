@@ -1,6 +1,5 @@
 .p-about {
     padding-inline: 2.8125rem;
-    width: 27.5rem;
 }
 
 .title h2 {
@@ -9,7 +8,6 @@
   text-align: center;
   margin: 0 auto;
   padding-block: 3rem;
-  z-index: 20;
 }
 
 .title h2::before {
@@ -37,6 +35,7 @@
 
 .p-about__text span {
     position: relative;
+
 }
 
 .p-about__text span::before {
