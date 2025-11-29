@@ -19,7 +19,7 @@
   });
 
   // リンクホバー時
-  const links = document.querySelectorAll('a, button, [role="button"], [tabindex="0"], .icon, .grid-item');
+  const links = document.querySelectorAll('a, button, [role="button"], [tabindex="0"], .icon, .grid-item, .accordion-header');
   links.forEach((link) => {
     link.addEventListener('mouseenter', () => {
       stalker.classList.add('is-link-hover');
