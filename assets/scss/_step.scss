@@ -20,12 +20,12 @@ li {
     list-style: none;
 }
 
-body {
-    width: 1200px;
-}
+// body {
+//     width: 1200px;
+// }
 
 .wrapper {
-    width: 440px;
+    // width: 440px;
     margin: 0 auto;
     padding-bottom: 50px;
     background-color: bisque;
@@ -201,7 +201,7 @@ body {
 /* テキスト本体 */
 .step-box-inner {
     position: relative;
-    z-index: 2;
+    // z-index: 2;
 
     & h3 {
         font-size: 20px;

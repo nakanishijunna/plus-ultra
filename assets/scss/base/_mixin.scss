@@ -1,6 +1,6 @@
 $breakpoints: (
   "sp": 600px,
-  "tab": 980px,
+  "tab": 768px,
   "pc": 981px
 );
 @mixin mq($device) {
