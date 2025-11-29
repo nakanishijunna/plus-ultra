@@ -13,7 +13,20 @@
 
 
     .title-box {
+      position: relative;
       margin: 20px 0;
+
+      span {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+      }
+    }
+
+    .title h2::before {
+      color: #C0E7B3;
+      top: 0;
     }
   }
 }
@@ -65,7 +78,7 @@
   align-items: center;
   background: rgba(0, 0, 0, 0.8);
   transition: 0.5s;
-  z-index: 10;
+  z-index: 30;
 
   &.open {
     display: block;
@@ -77,7 +90,7 @@
   width: 90%;
   max-width: 600px;
   transition: 0.5s;
-  z-index: 20;
+  z-index: 40;
 
   &.show {
     display: block;
@@ -85,7 +98,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     color: #fff;
   }
 

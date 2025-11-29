@@ -9,10 +9,12 @@
   display: none;
   @include mq(tab) {
     display: block;
-    position: fixed;
-    width: 100%;
+    position: sticky;
+    width: 100vw;
+    height: 60px;
     top: 0;
     left: 0;
+    z-index: 900;
   }
 }
 
@@ -22,6 +24,10 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    position: fixed;
+    z-index: 9999;
+    width: 100vw;
+    top: 0;
     padding: 2%;
     justify-content: space-between;
     align-items: center;
@@ -86,8 +92,9 @@
   padding-top: 1rem;
   padding-inline: 1rem;
   @include mq(tab) {
-      transform: translateZ(0);
-
+      // transform: translateZ(0);
+    width: 100vw;
+    height: 100vh;
     position: fixed;
     inset: 0; /* top:0; right:0; bottom:0; left:0; と同義 */
     background: rgba(255, 246, 216, 0.9);
@@ -96,13 +103,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 0;
-    margin-inline: auto;
-
+    padding-top: 80px;
+    padding-inline: 20%;
     /* 上から隠してスライドイン */
     transform: translateY(-100%);
     transition: transform 0.4s ease-in-out;
     /* スクロールを防ぎ、リンク以外のクリックは透過させない（デフォルトのまま） */
+  }
+}
+
+.nav-links__sp {
+  display: none; 
+  @include mq(tab) {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 }
 
@@ -111,14 +127,6 @@
     transform: translateY(0);
   }
 }
-
-.reason-detail-analize,
-.reason-detail-support {
-  @include mq(tab) {
-    z-index: 10;  // 背面へ
-  }
-}
-
 
 .nav-links li {
   margin-bottom: 1.3rem;
@@ -136,7 +144,7 @@
   box-shadow: 0 4px 0 #283a44; // ボタンの影
   transform: rotate(-14deg);
   @include mq(tab) {
-    margin-left: 20%;
+    margin-right: 30%;
   }
 }
 
@@ -145,7 +153,7 @@
   transform: rotate(14deg);
   box-shadow: 0 4px 0 #784503;
   @include mq(tab) {
-    margin-right: 20%;
+    margin-left: 30%;
   }
 }
 
