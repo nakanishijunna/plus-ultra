@@ -1,7 +1,3 @@
-main {
-  width: 30rem;
-  margin-inline: 5%;
-}
 
 .p-empathy {
     width: 100%;
@@ -52,8 +48,18 @@ main {
     box-shadow: 1px 5px 5px -2px #3C4043;
 }
 
+.p-empathy__worries-lists .p-empathy__worries-list:nth-of-type(odd) {
+    margin-right: auto;
+    @include mq(sp) {
+        margin-left: 30%;
+    }
+}
+
 .p-empathy__worries-lists .p-empathy__worries-list:nth-of-type(even) {
-    margin-inline: auto 0;
+    margin-left: auto;
+    @include mq(sp) {
+        margin-right: 30%;
+    }
 }
 
 .p-empathy__answer-wrapper {
@@ -64,10 +70,16 @@ main {
     padding-block: 5rem;
 }
 
+.p-empathy__answer-inner {
+    padding-inline: 15%;
+    @include mq(sp) {
+        padding-inline: 35%;
+    }
+}
+
 .p-empathy__answer-reading {
     padding: 1rem 2rem;
     background-image: linear-gradient(90deg, #ffc22f 30%, #ffde8d 52%, #ffc22f 70%);
-    display: inline-block;
     color: #ffffff;
     border-radius: 0.625rem;
     margin-bottom: 2rem;
@@ -82,7 +94,6 @@ main {
     padding: 1rem 3.38rem;
     text-align: left;
     color: #ffffff;
-    display: inline-block;
     border-radius: 0.625rem;
 }
 

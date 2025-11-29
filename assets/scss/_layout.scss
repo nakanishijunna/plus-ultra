@@ -1,0 +1,27 @@
+/* PCデザイン: 3カラム (20% 50% 30%) */
+.layout {
+  display: grid;
+  grid-template-columns: 20% 45% 35%;
+  min-height: 100vh;
+  width: 100%;
+  @include mq(sp) {
+    grid-template-columns: 100%;
+  }
+}
+
+.left-col {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 5%;
+  @include mq(sp) {
+    height: initial;
+    padding: 0;
+  }
+}
+
+.right-col {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}

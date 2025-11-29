@@ -32,3 +32,11 @@ $breakpoints: (
 @function svw($px) {
   @return calc(#{$px}vw / 3.75);
 }
+
+$sp: 600px;
+
+@mixin sp {
+    @media (max-width: ($sp)) {
+        @content;
+    }
+}

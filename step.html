@@ -14,8 +14,13 @@
         <div class="wrapper">
             <section id="step" class="step">
 
+                <div class="title-box title js-scroll-trigger">
+                    <h2 data-en="step">
+                        <span>“未来”</span>を変える<br>&emsp;&emsp;&emsp;&emsp;&emsp;5つのステップ
+                    </h2>
+                </div>
+
                 <div class="section-title">
-                    <h2><span>“未来”</span>を変える<br>&emsp;&emsp;&emsp;&emsp;&emsp;5つのステップ</h2>
                     <p>「“できるかも”が“できた！”に変わるまで、私たちがサポート！」</p>
                     <p>不安な今を抜け出して、自分らしい働き方へ。</p>
                 </div>
@@ -98,7 +103,8 @@
                             </div>
 
                             <div class="curriculums">
-                                <div class="curriculum-step"><img class="number" src="img\two_3524275 1.png" alt=""></div>
+                                <div class="curriculum-step"><img class="number" src="img\two_3524275 1.png" alt="">
+                                </div>
                                 <div class="curriculum-content">
                                     <p class="head">応用・実践（２～４ヵ月）</p>
                                     <p>①模写コーディング</p>
@@ -107,7 +113,8 @@
                             </div>
 
                             <div class="curriculum">
-                                <div class="curriculum-step"><img class="number" src="img\three_3521969 1.png" alt=""></div>
+                                <div class="curriculum-step"><img class="number" src="img\three_3521969 1.png" alt="">
+                                </div>
                                 <div class="curriculum-content">
                                     <p class="head">案件（１か月）</p>
                                     <p>①ポートフォリオ作成</p>
@@ -202,59 +209,59 @@
         </div>
     </main>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const accordions = document.querySelectorAll(".step_box");
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const accordions = document.querySelectorAll(".step_box");
 
-    accordions.forEach(acc => {
-        const icon = acc.querySelector(".icon");
-        const body = acc.querySelector(".step-box-body");
+            accordions.forEach(acc => {
+                const icon = acc.querySelector(".icon");
+                const body = acc.querySelector(".step-box-body");
 
-        body.style.overflow = "hidden";
-        body.style.maxHeight = "0px";
-        body.style.transition = "max-height 1.5s ease, opacity 1.5s ease";
-        body.style.opacity = 0;
-
-        // summaryクリックをJSで制御する
-        const summary = acc.querySelector("summary");
-        summary.addEventListener("click", (e) => {
-            e.preventDefault(); // ←ここが重要：ブラウザの自動開閉を無効化
-            const isOpen = acc.classList.contains("open");
-
-            // 他のアコーディオンを閉じる
-            accordions.forEach(other => {
-                if (other !== acc) {
-                    other.classList.remove("open");
-                    const otherBody = other.querySelector(".step-box-body");
-                    otherBody.style.maxHeight = "0px";
-                    otherBody.style.opacity = 0;
-                    const otherIcon = other.querySelector(".icon");
-                    otherIcon.style.transform = "rotate(0deg)";
-                }
-            });
-
-            if (!isOpen) {
-                // 開く
-                acc.classList.add("open");
-                const scrollHeight = body.scrollHeight;
-                body.style.maxHeight = scrollHeight + "px";
-                body.style.opacity = 1;
-                icon.style.transform = "rotate(45deg)";
-
-                // スクロール自動調整
-                const topPos = acc.getBoundingClientRect().top + window.scrollY - 50;
-                window.scrollTo({ top: topPos, behavior: "smooth" });
-            } else {
-                // 閉じる
-                acc.classList.remove("open");
+                body.style.overflow = "hidden";
                 body.style.maxHeight = "0px";
+                body.style.transition = "max-height 1.5s ease, opacity 1.5s ease";
                 body.style.opacity = 0;
-                icon.style.transform = "rotate(0deg)";
-            }
+
+                // summaryクリックをJSで制御する
+                const summary = acc.querySelector("summary");
+                summary.addEventListener("click", (e) => {
+                    e.preventDefault(); // ←ここが重要：ブラウザの自動開閉を無効化
+                    const isOpen = acc.classList.contains("open");
+
+                    // 他のアコーディオンを閉じる
+                    accordions.forEach(other => {
+                        if (other !== acc) {
+                            other.classList.remove("open");
+                            const otherBody = other.querySelector(".step-box-body");
+                            otherBody.style.maxHeight = "0px";
+                            otherBody.style.opacity = 0;
+                            const otherIcon = other.querySelector(".icon");
+                            otherIcon.style.transform = "rotate(0deg)";
+                        }
+                    });
+
+                    if (!isOpen) {
+                        // 開く
+                        acc.classList.add("open");
+                        const scrollHeight = body.scrollHeight;
+                        body.style.maxHeight = scrollHeight + "px";
+                        body.style.opacity = 1;
+                        icon.style.transform = "rotate(45deg)";
+
+                        // スクロール自動調整
+                        const topPos = acc.getBoundingClientRect().top + window.scrollY - 50;
+                        window.scrollTo({ top: topPos, behavior: "smooth" });
+                    } else {
+                        // 閉じる
+                        acc.classList.remove("open");
+                        body.style.maxHeight = "0px";
+                        body.style.opacity = 0;
+                        icon.style.transform = "rotate(0deg)";
+                    }
+                });
+            });
         });
-    });
-});
-</script>
+    </script>
 </body>
 
 </html>
