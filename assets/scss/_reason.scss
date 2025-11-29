@@ -70,8 +70,10 @@
 }
 
 .mask {
-  display: none;
+  display: flex;
   position: fixed;
+  visibility: hidden;
+  opacity: 0;
   inset: 0;
   justify-content: center;
   align-items: center;
@@ -80,16 +82,22 @@
   z-index: 30;
 
   &.open {
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
 }
 
 .mask-content {
   display: none;
   width: 90%;
-  max-width: 600px;
   transition: 0.5s;
   z-index: 40;
+  box-sizing: border-box;
+
+  @include mq(sp){
+    max-width: 95vw;
+    padding: 15px;
+  }
 
   &.show {
     display: block;

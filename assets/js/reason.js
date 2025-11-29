@@ -4,11 +4,15 @@ $(function () {
     const target = $(this).data("target");
     $("#" + target).addClass("show");
     $(".mask").addClass("open");
+
+    document.body.classList.add("body--lock")
   });
 
   $(".mask,.mask-content").on("click", function () {
     $(".mask").removeClass("open");
     $(".mask-content").removeClass("show");
+
+    document.body.classList.remove("body--lock");
   });
 });
 
