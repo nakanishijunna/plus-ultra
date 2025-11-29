@@ -630,7 +630,6 @@ body {
 
 .mask-content {
   display: none;
-  width: 90%;
   transition: 0.5s;
   z-index: 40;
   box-sizing: border-box;
