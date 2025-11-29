@@ -2,19 +2,19 @@
 $(function () {
   $(".grid-item").on("click", function () {
     const target = $(this).data("target");
+    $(".mask-content").removeClass("show");
     $("#" + target).addClass("show");
-    $(".mask").addClass("open");
+    $(".reason-main").addClass("open");
 
-    document.body.classList.add("body--lock")
   });
 
   $(".mask,.mask-content").on("click", function () {
-    $(".mask").removeClass("open");
+    $(".reason-main").removeClass("open");
     $(".mask-content").removeClass("show");
 
-    document.body.classList.remove("body--lock");
   });
 });
+
 
 /*スクロールしたらセクションタイトルがフェードインする*/
 $(function(){
