@@ -1,10 +1,14 @@
-.wrapper {
-  padding: 0 5%;
-}
-
 .question {
   padding: 30px 0 50px;
-  background-color: rgba(255, 194, 47, 0.2);
+
+
+  .wrapper {
+      background-color: rgba(255, 194, 47, 0.2);
+}
+
+  .title h2::before {
+    top: 0;
+  }
 
   /*paddingの設定*/
   $question-padding: 10px 35px 10px 15px;
