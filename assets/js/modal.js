@@ -4,7 +4,7 @@
 const floatingLinks = document.getElementById("floatingLinks");
 
 window.addEventListener("scroll", () => {
-  const mvHeight = document.querySelector(".mv").offsetHeight;
+  const mvHeight = document.querySelector(".hero").offsetHeight;
 
   if (window.innerWidth <= 768) {
     floatingLinks.style.display =
