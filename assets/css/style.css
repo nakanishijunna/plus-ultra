@@ -464,6 +464,10 @@ footer p {
   font-size: 14px;
 }
 
+.question-inner {
+  padding-inline: 5%;
+}
+
 .p-empathy {
   width: 100%;
 }
@@ -741,7 +745,7 @@ footer p {
 }
 
 .inner {
-  max-width: 763px;
+  width: 440px;
   margin: 0 auto;
   padding-bottom: 50px;
 }
@@ -761,7 +765,7 @@ footer p {
 }
 
 .section-title p {
-  font-size: 16px;
+  font-size: 13px;
 }
 
 #step {
@@ -846,8 +850,7 @@ footer p {
   align-items: flex-start;
   cursor: pointer;
   padding: 20px 20px;
-  margin-inline: 10px;
-  font-size: 20px;
+  margin-inline: -20px;
 }
 
 /* Webkitのマーカー削除 */
@@ -943,7 +946,6 @@ footer p {
   padding: 25px 15px;
   margin-top: 15px;
   background-image: url("../../img/step1.png");
-  background-size: cover;
 }
 
 .step2-box-body {
@@ -1109,7 +1111,7 @@ footer p {
 /* 「ステップ」「内容・期間」 */
 .curriculum:nth-of-type(2) {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background: #d9e5c3;
   padding-inline: 17%;
   border-radius: 16px;
@@ -1126,25 +1128,24 @@ footer p {
 .curriculum {
   display: flex;
   justify-content: space-between;
-  gap: 20%;
+  gap: 20px;
   padding: 20px 18px;
   border-radius: 22px;
   margin-top: 20px;
   align-items: center;
   padding-right: 19%;
-  padding-left: 23%;
+  padding-left: 63px;
 }
 
 .curriculums {
   display: flex;
   justify-content: space-between;
-  gap: 20%;
+  gap: 20px;
   padding: 20px 18px;
   border-radius: 22px;
   margin-top: 20px;
   align-items: center;
-  padding-left: 23%;
-  padding-right: 10%;
+  padding-left: 63px;
 }
 
 /* 左の数字（1・2・3） */
@@ -1226,7 +1227,7 @@ footer p {
 }
 
 .point .point-contents p span {
-  font-size: 20px;
+  font-size: 12px;
   font-weight: bold;
 }
 
@@ -1235,13 +1236,9 @@ footer p {
 }
 
 .get {
-  padding: 30px;
+  padding-top: 8px;
   text-align: left;
   padding-inline: 10px;
-}
-
-.get .border {
-  border-bottom: 2px solid #ffb53b;
 }
 
 .point-content {
@@ -1253,7 +1250,6 @@ footer p {
 
 .point-content p span {
   font-weight: bold;
-  font-size: 20px;
 }
 
 .point-contents {
@@ -1265,7 +1261,6 @@ footer p {
   font-size: 20px;
   font-weight: bold;
   color: #2196F3;
-  padding-block: 15px 10px;
 }
 
 .support {
@@ -1574,34 +1569,27 @@ step5 デザイン（画像に完全合わせ）
   }
 }
 
-.g__counseling__tab {
+.g__counseling.g__counseling__tab {
   display: none;
 }
-
-.g__counseling__tab.g__counseling__sp {
-  display: block;
-}
-.g__counseling__tab.g__counseling__sp .g__counseling__reserve img, .g__counseling__tab.g__counseling__sp .g__counseling__line img {
-  width: 25px;
-  height: 25px;
-}
-
-.g__counseling__tab .g__counseling__flex {
-  display: flex;
-  position: fixed;
-  top: 60px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  max-width: 768px;
-  height: auto;
-  z-index: 1000;
-}
-.g__counseling__tab .g__counseling__flex .g__counseling__reserve, .g__counseling__tab .g__counseling__flex .g__counseling__line {
-  flex: 0 0 50%;
+@media (max-width: 768px) {
+  .g__counseling.g__counseling__tab {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1000;
+  }
+  .g__counseling.g__counseling__tab .g__counseling__reserve,
+  .g__counseling.g__counseling__tab .g__counseling__line {
+    flex: 0 0 50%;
+  }
 }
 
-.g__counseling__pc .g__counseling__container {
+.g__counseling__container {
   display: flex;
   max-width: 600px;
   width: 100%;
@@ -1615,18 +1603,18 @@ step5 デザイン（画像に完全合わせ）
   z-index: 20;
 }
 @media (max-width: 830px) {
-  .g__counseling__pc .g__counseling__container {
+  .g__counseling__container {
     height: 12vh;
   }
 }
-.g__counseling__pc .g__counseling__container img {
+.g__counseling__container img {
   width: 25px;
 }
-.g__counseling__pc .g__counseling__container .g__counseling__text {
+.g__counseling__container .g__counseling__text {
   display: none;
 }
 @media (max-width: 600px) {
-  .g__counseling__pc .g__counseling__container .g__counseling__text {
+  .g__counseling__container .g__counseling__text {
     display: block;
   }
 }
