@@ -1570,27 +1570,34 @@ step5 デザイン（画像に完全合わせ）
   }
 }
 
-.g__counseling.g__counseling__tab {
+.g__counseling__tab {
   display: none;
 }
-@media (max-width: 768px) {
-  .g__counseling.g__counseling__tab {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: auto;
-    z-index: 1000;
-  }
-  .g__counseling.g__counseling__tab .g__counseling__reserve,
-  .g__counseling.g__counseling__tab .g__counseling__line {
-    flex: 0 0 50%;
-  }
+
+.g__counseling__tab.g__counseling__sp {
+  display: block;
+}
+.g__counseling__tab.g__counseling__sp .g__counseling__reserve img, .g__counseling__tab.g__counseling__sp .g__counseling__line img {
+  width: 25px;
+  height: 25px;
 }
 
-.g__counseling__container {
+.g__counseling__tab .g__counseling__flex {
+  display: flex;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 768px;
+  height: auto;
+  z-index: 1000;
+}
+.g__counseling__tab .g__counseling__flex .g__counseling__reserve, .g__counseling__tab .g__counseling__flex .g__counseling__line {
+  flex: 0 0 50%;
+}
+
+.g__counseling__pc .g__counseling__container {
   display: flex;
   max-width: 600px;
   width: 100%;
@@ -1604,18 +1611,18 @@ step5 デザイン（画像に完全合わせ）
   z-index: 20;
 }
 @media (max-width: 830px) {
-  .g__counseling__container {
+  .g__counseling__pc .g__counseling__container {
     height: 12vh;
   }
 }
-.g__counseling__container img {
+.g__counseling__pc .g__counseling__container img {
   width: 25px;
 }
-.g__counseling__container .g__counseling__text {
+.g__counseling__pc .g__counseling__container .g__counseling__text {
   display: none;
 }
 @media (max-width: 600px) {
-  .g__counseling__container .g__counseling__text {
+  .g__counseling__pc .g__counseling__container .g__counseling__text {
     display: block;
   }
 }
