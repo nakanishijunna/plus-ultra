@@ -14,6 +14,9 @@ function toggleClassByWidth() {
     } else {
       tab.classList.remove('g__counseling__sp');
     }
+    }else{
+    tab.classList.remove('g__counseling__sp');
+
   }
 }
 
