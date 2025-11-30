@@ -741,7 +741,7 @@ footer p {
 }
 
 .inner {
-  width: 440px;
+  max-width: 763px;
   margin: 0 auto;
   padding-bottom: 50px;
 }
@@ -761,7 +761,7 @@ footer p {
 }
 
 .section-title p {
-  font-size: 13px;
+  font-size: 16px;
 }
 
 #step {
@@ -846,7 +846,8 @@ footer p {
   align-items: flex-start;
   cursor: pointer;
   padding: 20px 20px;
-  margin-inline: -20px;
+  margin-inline: 10px;
+  font-size: 20px;
 }
 
 /* Webkitのマーカー削除 */
@@ -942,6 +943,7 @@ footer p {
   padding: 25px 15px;
   margin-top: 15px;
   background-image: url("../../img/step1.png");
+  background-size: cover;
 }
 
 .step2-box-body {
@@ -1107,7 +1109,7 @@ footer p {
 /* 「ステップ」「内容・期間」 */
 .curriculum:nth-of-type(2) {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background: #d9e5c3;
   padding-inline: 17%;
   border-radius: 16px;
@@ -1124,24 +1126,25 @@ footer p {
 .curriculum {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 20%;
   padding: 20px 18px;
   border-radius: 22px;
   margin-top: 20px;
   align-items: center;
   padding-right: 19%;
-  padding-left: 63px;
+  padding-left: 23%;
 }
 
 .curriculums {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 20%;
   padding: 20px 18px;
   border-radius: 22px;
   margin-top: 20px;
   align-items: center;
-  padding-left: 63px;
+  padding-left: 23%;
+  padding-right: 10%;
 }
 
 /* 左の数字（1・2・3） */
@@ -1223,7 +1226,7 @@ footer p {
 }
 
 .point .point-contents p span {
-  font-size: 12px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -1232,7 +1235,7 @@ footer p {
 }
 
 .get {
-  padding-top: 8px;
+  padding: 30px;
   text-align: left;
   padding-inline: 10px;
 }
@@ -1246,6 +1249,7 @@ footer p {
 
 .point-content p span {
   font-weight: bold;
+  font-size: 20px;
 }
 
 .point-contents {
@@ -1257,6 +1261,7 @@ footer p {
   font-size: 20px;
   font-weight: bold;
   color: #2196F3;
+  padding-block: 15px 10px;
 }
 
 .support {
