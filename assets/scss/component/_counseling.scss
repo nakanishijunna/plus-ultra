@@ -25,8 +25,8 @@
 
 .g__counseling__tab.g__counseling__sp {
   position:sticky;
-  top: calc(100vh - 80px);
-  z-index: 9999;
+  top: 60px;
+  z-index: 99;
 }
 
 .g__counseling__tab .g__counseling__container{
@@ -63,7 +63,7 @@
   z-index: 9999;
 
   @media(max-width: 768px) {
-    flex-basis: 70px;
+    flex-basis: 50%;
   }
 
   h3 {
@@ -121,7 +121,7 @@
   z-index: 9999;
 
   @media(max-width: 768px) {
-    flex-basis: 70px;
+    flex-basis: 50%;
   }
 
   h3 {
