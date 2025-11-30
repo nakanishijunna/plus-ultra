@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 
-<body class="body--lock">
+<body>
     <header class="p-header__sp">
         <nav class="navbar">
             <div class="p-header__wrapper">
@@ -29,53 +29,98 @@
             </div>
 
             <ul class="nav-links nav-links__sp" id="nav-links">
-                <li><a href="#">Pronaviについて</a></li>
-                <li><a href="#">未来を変える<br>
+                <li><a href="#about">Pronaviについて</a></li>
+                <li><a href="#Voice">受講生の声</a></li>
+                <li><a href="#reason">9つの理由</a></li>
+                <li><a href="#step">未来を変える<br>
                         5つのステップ</a></li>
-                <li><a href="#">受講生の声</a></li>
-                <li><a href="#">受講生の実績</a></li>
-                <li><a href="#">Success Stories</a></li>
-                <li><a href="#">Q＆A</a></li>
+                <li><a href="#teacher">講師紹介</a></li>
+                <li><a href="#portfolio">受講生の実績</a></li>
+                <li><a href="#question">Q＆A</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- ===== メインビジュアル（ローディング&手書きアニメ） ===== -->
+    <div id="hero" class="hero">
+
+        <div class="bg-video">
+            <video id="bgVideo" autoplay muted playsinline>
+            </video>
+        </div>
+
+        <div class="hero-inner">
+            <svg id="logoSVG" width="100%" height="auto" viewBox="0 0 900 180">
+                <path id="heroTrail1"
+                    d="M0 138.452L21.733 7.54254H73.3807C83.267 7.54254 91.3849 9.43885 97.7344 13.2315C104.126 16.9815 108.601 22.2016 111.158 28.892C113.757 35.5397 114.354 43.2102 112.947 51.9033C111.499 60.6391 108.345 68.3309 103.487 74.9786C98.6719 81.5837 92.4077 86.74 84.6946 90.4474C76.9815 94.1548 68.0753 96.0084 57.9759 96.0084H25.0568L28.7003 73.8281H57.1449C62.5142 73.8281 67.0952 72.9119 70.8878 71.0795C74.723 69.2045 77.7699 66.6264 80.0284 63.3451C82.2869 60.0212 83.7571 56.2073 84.4389 51.9033C85.1634 47.5141 84.929 43.7002 83.7358 40.4616C82.5426 37.2229 80.348 34.7087 77.152 32.919C73.9986 31.0866 69.7585 30.1704 64.4318 30.1704H45.767L27.6776 138.452H0Z"
+                    fill="black" fill-opacity="0" />
+                <path id="heroTrail2"
+                    d="M143.032 138.452L159.395 40.2699H185.794L182.918 57.4006H183.941C186.753 51.3068 190.525 46.7046 195.255 43.5938C200.027 40.4404 205.162 38.8636 210.659 38.8636C212.023 38.8636 213.451 38.9489 214.942 39.1193C216.476 39.2472 217.84 39.4602 219.033 39.7585L214.942 63.9844C213.749 63.5583 212.044 63.2173 209.828 62.9617C207.655 62.6634 205.588 62.5142 203.628 62.5142C199.665 62.5142 195.979 63.3878 192.57 65.135C189.161 66.8395 186.284 69.2259 183.941 72.2941C181.64 75.3622 180.127 78.8992 179.402 82.9048L170.262 138.452H143.032Z"
+                    fill="black" fill-opacity="0" />
+                <path id="heroTrail3"
+                    d="M283.602 140.369C273.588 140.369 265.3 138.239 258.737 133.977C252.175 129.673 247.551 123.707 244.866 116.08C242.224 108.409 241.734 99.4815 243.396 89.2969C245.016 79.2401 248.382 70.4404 253.496 62.8977C258.609 55.3551 265.108 49.4957 272.991 45.3196C280.875 41.1009 289.76 38.9915 299.646 38.9915C309.618 38.9915 317.885 41.1435 324.447 45.4474C331.01 49.7088 335.633 55.6747 338.318 63.3452C341.003 71.0156 341.514 79.9432 339.852 90.1279C338.19 100.142 334.781 108.92 329.625 116.463C324.469 124.006 317.97 129.886 310.129 134.105C302.288 138.281 293.446 140.369 283.602 140.369ZM286.287 119.276C290.889 119.276 294.959 117.976 298.496 115.376C302.075 112.734 305.037 109.155 307.381 104.638C309.767 100.078 311.429 94.9219 312.366 89.169C313.304 83.5014 313.368 78.473 312.558 74.0838C311.749 69.652 310.044 66.1577 307.445 63.6009C304.888 61.044 301.372 59.7656 296.898 59.7656C292.295 59.7656 288.205 61.0867 284.625 63.7287C281.045 66.3281 278.084 69.9077 275.74 74.4673C273.396 79.027 271.756 84.2046 270.818 90C269.923 95.625 269.859 100.653 270.626 105.085C271.393 109.474 273.077 112.947 275.676 115.504C278.276 118.018 281.812 119.276 286.287 119.276Z"
+                    fill="black" fill-opacity="0" />
+                <path id="heroTrail4"
+                    d="M508.244 7.54263L486.511 138.452H462.605L419.459 56.0583H418.436L404.693 138.452H377.016L398.749 7.54263H423.038L465.993 89.8722H467.08L480.695 7.54263H508.244Z"
+                    fill="black" fill-opacity="0" />
+                <path id="heroTrail5"
+                    d="M563.609 140.305C557.387 140.305 551.997 139.219 547.437 137.045C542.92 134.83 539.596 131.548 537.466 127.202C535.335 122.855 534.802 117.464 535.867 111.03C536.805 105.575 538.573 101.016 541.173 97.3509C543.815 93.6435 547.032 90.6605 550.825 88.402C554.618 86.1435 558.815 84.4176 563.417 83.2244C568.062 82.0313 572.856 81.2216 577.799 80.7955C583.51 80.1989 588.154 79.6236 591.734 79.0696C595.356 78.5156 598.062 77.7273 599.852 76.7046C601.642 75.6392 602.728 74.0625 603.112 71.9744V71.5909C603.751 67.5852 603.005 64.4744 600.875 62.2585C598.787 60 595.441 58.8707 590.839 58.8707C585.981 58.8707 581.848 59.9361 578.439 62.0668C575.072 64.1974 572.664 66.9034 571.216 70.1847L546.414 68.1392C548.63 62.1733 551.975 57.0171 556.45 52.6705C560.967 48.2813 566.4 44.9148 572.75 42.571C579.099 40.1847 586.216 38.9915 594.099 38.9915C599.554 38.9915 604.646 39.6307 609.376 40.9091C614.149 42.1875 618.261 44.169 621.713 46.8537C625.207 49.5384 627.721 52.9901 629.255 57.2088C630.832 61.385 631.152 66.3921 630.214 72.2301L619.156 138.452H593.332L595.633 124.837H594.866C592.778 127.905 590.221 130.611 587.196 132.955C584.17 135.256 580.697 137.067 576.777 138.388C572.856 139.666 568.467 140.305 563.609 140.305ZM574.539 121.513C578.502 121.513 582.146 120.724 585.47 119.148C588.836 117.528 591.606 115.355 593.779 112.628C595.995 109.901 597.402 106.811 597.998 103.359L599.66 92.9403C598.808 93.4943 597.572 93.9844 595.953 94.4105C594.376 94.8366 592.65 95.2415 590.775 95.625C588.943 95.9659 587.089 96.2855 585.214 96.5838C583.339 96.8395 581.656 97.0952 580.164 97.3509C576.883 97.8196 573.943 98.5654 571.343 99.5881C568.744 100.611 566.635 101.996 565.015 103.743C563.396 105.447 562.395 107.578 562.011 110.135C561.414 113.842 562.288 116.676 564.632 118.636C567.018 120.554 570.321 121.513 574.539 121.513Z"
+                    fill="black" fill-opacity="0" />
+                <path id="heroTrail6"
+                    d="M771.664 40.2699L720.975 138.452H690.293L672.331 40.2699H700.073L708.766 110.518H709.789L741.813 40.2699H771.664Z"
+                    fill="black" fill-opacity="0" />
+                <path id="heroTrail7"
+                    d="M796.235 138.452L812.598 40.2699H839.828L823.465 138.452H796.235ZM829.026 27.4858C824.978 27.4858 821.632 26.1435 818.99 23.4588C816.391 20.7315 815.326 17.4929 815.794 13.7429C816.263 9.90767 818.095 6.66904 821.291 4.02699C824.487 1.34233 828.11 0 832.158 0C836.206 0 839.509 1.34233 842.066 4.02699C844.622 6.66904 845.688 9.90767 845.262 13.7429C844.836 17.4929 843.024 20.7315 839.828 23.4588C836.675 26.1435 833.074 27.4858 829.026 27.4858Z"
+                    fill="black" fill-opacity="0" />
+            </svg>
+
+            <p class="hero-tagline">ただ動くだけじゃない。<br>心が動く、学びの体験を。</p>
+            <p class="hero-sub">～6か月で、あなたの可能性が動き出す。～</p>
+
+            <!-- ドラッグ誘導（←矢印） -->
+            <div class="drag-area">
+                <div class="arrow-head"></div>
+                <div class="arrow-body" id="arrowBody"></div>
+            </div>
+
+        </div>
+    </div>
 
     <div class="layout">
         <!-- 左のヘッダーの役割 -->
         <div class="left-col">
             <header class="p-header__pc">
-                <nav class="navbar">
-                    <div class="p-header__wrapper">
-                        <div class="p-header__logo">
-                            <a href="#">
-                                <img src="img/logo.png" alt="ProNavi">
-                            </a>
-                        </div>
-
-                        <!-- type="button" を明示、ARIAで状態を伝える -->
-                        <button class="hamburger" id="hamburger" type="button" aria-label="メニュー" aria-expanded="true">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
+                <div class="p-header__wrapper">
+                    <div class="p-header__logo">
+                        <a href="#">
+                            <img src="img/logo.png" alt="ProNavi">
+                        </a>
                     </div>
 
+                    <!-- type="button" を明示、ARIAで状態を伝える -->
+                    <button class="hamburger" id="hamburger" type="button" aria-label="メニュー" aria-expanded="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <nav class="navbar">
                     <ul class="nav-links" id="nav-links">
-                        <li><a href="#">Pronaviについて</a></li>
-                        <li><a href="#">未来を変える<br>
+                        <li><a href="#about">Pronaviについて</a></li>
+                        <li><a href="#voice">受講生の声</a></li>
+                        <li><a href="#reason">9つの理由</a></li>
+                        <li><a href="#step">未来を変える<br>
                                 5つのステップ</a></li>
-                        <li><a href="#">受講生の声</a></li>
-                        <li><a href="#">受講生の実績</a></li>
-                        <li><a href="#">Success Stories</a></li>
-                        <li><a href="#">Q＆A</a></li>
+                        <li><a href="#teacher">講師紹介</a></li>
+                        <li><a href="#portfolio">受講生の実績</a></li>
+                        <li><a href="#question">Q＆A</a></li>
                     </ul>
                 </nav>
             </header>
         </div>
 
         <!-- 真ん中のメイン -->
-        <div class="mv">mainvisual</div>
-
         <div class="center-col">
             <section id="empathy" class="p-empathy">
                 <div class="p-empathy__reading-wrapper">
@@ -115,7 +160,7 @@
             </section>
 
             <section id="about" class="p-about">
-                <div class="p-about__title title">
+                <div class="title-box p-about__title title js-scroll-trigger">
                     <h2 data-en="ProNavi">
                         "やってみたい"が、<br>
                         "できる"に変わる場所
@@ -124,17 +169,19 @@
                 <div class="p-about__wrapper">
                     <div class="p-about__text">
                         <p>「在宅で働いてみたい」「副業を始めてみたい」「プログラミングを学んでみたい」<br>
-                            そんな<span>“やってみたい”</span>という気持ちを、私たちは何よりも大切にしています。</p>
-                        <p>このスクールは、<span>パソコン初心者〜初級者</span>の方でも安心して始められる、<span>オンライン完結型</span>のプログラミング学習サービスです。</p>
+                            そんな<span class="marker">“やってみたい”</span>という気持ちを、私たちは何よりも大切にしています。</p>
+                        <p>このスクールは、<span class="marker">パソコン初心者〜初級者</span>の方でも安心して始められる、<span
+                                class="marker">オンライン完結型</span>のプログラミング学習サービスです。</p>
                         <p>学習はすべて自分のペースで進められるから、忙しい方でも無理なく継続できます。<br>
-                            指導はM<span>現役エンジニア講師によるマンツーマン。</span>わからないことはすぐに相談できる環境が整っています。</p>
+                            指導はM<span class="marker">現役エンジニア講師によるマンツーマン。</span>わからないことはすぐに相談できる環境が整っています。</p>
                     </div>
                     <div class="p-about__image">
                         <img src="/img/about.jpg" alt="">
                     </div>
                     <div class="p-about__text">
                         <p>カリキュラムは、未経験でも「できる」を実感できるよう設計されており、学習後は実際の案件に講師が同行してくれるサポートもあるため、学んだことをすぐに“仕事”に活かせます。</p>
-                        <p>「スクールが多すぎて、どこを選べばいいかわからない」――そんな方こそ、まずは私たちのカウンセリングで、あなたの<span>“やってみたい”</span>を整理してみませんか？</p>
+                        <p>「スクールが多すぎて、どこを選べばいいかわからない」――そんな方こそ、まずは私たちのカウンセリングで、あなたの<span
+                                class="marker">“やってみたい”</span>を整理してみませんか？</p>
                         <p>一人ひとりの挑戦に、私たちは本気で向き合います。</p>
                     </div>
                 </div>
@@ -340,6 +387,91 @@
                     </div>
                 </section>
             </div>
+            <section id="voice" class="p-voice">
+                <div class="p-voice__title title-box title js-scroll-trigger">
+                    <h2 data-en="Voice">
+                        受講生の声
+                    </h2>
+                    <p>実際に入会された方の声を聴きました！</p>
+                </div>
+                <div class="p-voice__box-container">
+                    <div class="p-voice__box-scroll">
+                        <div class="p-voice__box">
+                            <div class="p-voice__box-reading">
+                                <div class="p-voice__box-image">
+                                    <img src="img/student4.jpg" alt="">
+                                </div>
+                                <div class="p-voice__box-title">
+                                    <h3>未経験でも挫折せず<br>
+                                        続けられた！</h3>
+                                </div>
+                            </div>
+                            <div class="p-voice__box-text">
+                                <p>副業からフリーランスになりたいと思って入会しました。優しく向上心が高い方が多いので、初心者の私でも挫折せずに進められましたし、今までの自分からは考えられない全く別の職種が広がり、考え方や人生観も変わりました。
+                                </p>
+                            </div>
+                            <div class="p-voice__box-name">
+                                <p>M.H　20代前半| 2023年8月入会</p>
+                            </div>
+                        </div>
+                        <div class="p-voice__box">
+                            <div class="p-voice__box-reading">
+                                <div class="p-voice__box-image">
+                                    <img src="img/student1.jpg" alt="">
+                                </div>
+                                <div class="p-voice__box-title">
+                                    <h3>案件獲得までが<br>
+                                        明確に！</h3>
+                                </div>
+                            </div>
+                            <div class="p-voice__box-text">
+                                <p>1対1での質問ができると聞いてプロナビに入り、実際2カ月ほど1対1で毎週教えていただきました。案件獲得も3度ほど打ち合わせに同行いただいたため、案件の進め方も教えていただきました。
+                                </p>
+                            </div>
+                            <div class="p-voice__box-name">
+                                <p>M.M　30代前半| 2023年5月入会</p>
+                            </div>
+                        </div>
+                        <div class="p-voice__box">
+                            <div class="p-voice__box-reading">
+                                <div class="p-voice__box-image">
+                                    <img src="img/student2.jpg" alt="">
+                                </div>
+                                <div class="p-voice__box-title">
+                                    <h3>マンツーマンでの<br>
+                                        授業体制！</h3>
+                                </div>
+                            </div>
+                            <div class="p-voice__box-text">
+                                <p>マンツーマンで授業してもらい、疑問を一緒に解決してもらえるだけでなく、課題があるので自分で調べたり考えたりする力も付いたと思います。案件に向けてもきめ細かいサポートがあるので、プロナビで学習できてよかったと実感します。
+                                </p>
+                            </div>
+                            <div class="p-voice__box-name">
+                                <p>N.Y　20代後半| 2022年6月入会</p>
+                            </div>
+                        </div>
+                        <div class="p-voice__box">
+                            <div class="p-voice__box-reading">
+                                <div class="p-voice__box-image">
+                                    <img src="img/student3.jpg" alt="">
+                                </div>
+                                <div class="p-voice__box-title">
+                                    <h3>ここなら<br>
+                                        信用できる！</h3>
+                                </div>
+                            </div>
+                            <div class="p-voice__box-text">
+                                <p>何人かとお話ししてみて、信用できる！と感じたので入会しましたが、案件獲得までこんなにサポートしてもらえるなんてびっくりです！皆さんと出会えて本当に幸せです！
+                                </p>
+                            </div>
+                            <div class="p-voice__box-name">
+                                <p>W.K　20代後半| 2023年4月入会</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
             <section id="reason">
                 <div class="reason-main">
@@ -389,7 +521,7 @@
                             </div>
                         </div>
 
-                        <div id="mask1" class="mask-content wrapper">
+                        <div id="mask1" class="mask-content">
                             <h3>\ コーチング特化型 /</h3>
                             <p>ただのマンツーマンではなく、その人自身を成長させます！<br>
                                 プログラミングを理解し、使えるようになるまでをサポート。着実にスキルが身に付きます。</p>
@@ -436,6 +568,7 @@
                             <p>ただのマンツーマンではなく、その人自身を成長させます！<br>
                                 プログラミングを理解し、使えるようになるまでをサポート。着実にスキルが身に付きます。</p>
                         </div>
+                        <div class="mask"></div>
 
                         <div class="reason-text">
                             <p>プログラミングスキルの習得には</p>
@@ -460,6 +593,399 @@
                     </div>
                 </div>
             </section>
+
+            <section id="step" class="step">
+
+                <div class="title-box title js-scroll-trigger">
+                    <h2 data-en="step">
+                        <span>“未来”</span>を変える<br>&emsp;&emsp;&emsp;&emsp;&emsp;5つのステップ
+                    </h2>
+                </div>
+
+                <div class="section-title">
+                    <p>「“できるかも”が“できた！”に変わるまで、私たちがサポート！」</p>
+                    <p>不安な今を抜け出して、自分らしい働き方へ。</p>
+                </div>
+
+                <div class="step_boxes">
+                    <!-- step1 -->
+                    <details class="step_box step-box">
+                        <summary class="step-box-head">
+                            <p class="step">step1　/　無料カウンセリング<br>
+                                あなたの想いを、まずは話してみましょう。</p>
+                            <div class="icon"></div>
+                        </summary>
+
+                        <div class="step1-box-body">
+                            <div class="step-box-inner">
+                                <h3>“<span>悩んでいる</span>今こそ、<br>まずは話してみませんか？”</h3>
+                                <p>
+                                    現状のスキルや叶えたい未来を伺い、あなたに<span>最適な道筋を</span>一緒に描きます。<br>
+                                    勧誘目的ではなく、純粋にあなたの将来の<span>選択肢を広げるため</span>の時間です。
+                                </p>
+                            </div>
+                        </div>
+                    </details>
+
+
+                    <!-- step2 -->
+                    <details class="step_box step-box">
+                        <summary class="step-box-head">
+                            <p class="title">step2　/　料金プラン<br>
+                                無理なく、あなたに合った形で。</p>
+                            <div class="icon"></div>
+                        </summary>
+
+                        <div class="step2-box-body">
+                            <div class="step-box-content">
+                                <h3><span>未来を変える</span>、”６ヵ月”</h3>
+                                <p class="money">総額550,000円</p>
+                                <p>
+                                    さぁ、無料カウンセリングへ！！<br>
+                                    あなたの未来を一緒に変えましょう。
+                                </p>
+                                <a class="btn" href="">今すぐ相談する</a>
+                            </div>
+                        </div>
+                    </details>
+
+
+                    <!-- step3 -->
+                    <details class="step_box step-box">
+                        <summary class="step-box-head">
+                            <p class="title">step3　/　カリキュラム説明<br>
+                                あなたに合った学び方を提案します。</p>
+                            <div class="icon"></div>
+                        </summary>
+
+                        <div class="step3-box-body">
+                            <div class="step-box-curriculums">
+                                <h3>🖋未経験から始める方のカリキュラムの例です。</h3>
+                                <p>※経験や個人の学習スピードにより変わります。</p>
+                            </div>
+
+                            <div class="curriculum">
+                                <div class="curriculum-step">
+                                    <p>ステップ</p>
+                                </div>
+                                <div class="curriculum-content">
+                                    <p>内容・期間</p>
+                                </div>
+                            </div>
+
+                            <div class="curriculum">
+                                <div class="curriculum-step">
+                                    <img class="number" src="img\one_3524352 1.png" alt="">
+                                </div>
+                                <div class="curriculum-content">
+                                    <p class="head">基礎固め（１か月）</p>
+                                    <p>①目的・目標設定</p>
+                                    <p>②環境構築</p>
+                                </div>
+                            </div>
+
+                            <div class="curriculums">
+                                <div class="curriculum-step"><img class="number" src="img\two_3524275 1.png" alt="">
+                                </div>
+                                <div class="curriculum-content">
+                                    <p class="head">応用・実践（２～４ヵ月）</p>
+                                    <p>①模写コーディング</p>
+                                    <p>②WordPress習得</p>
+                                </div>
+                            </div>
+
+                            <div class="curriculum">
+                                <div class="curriculum-step"><img class="number" src="img\three_3521969 1.png" alt="">
+                                </div>
+                                <div class="curriculum-content">
+                                    <p class="head">案件（１か月）</p>
+                                    <p>①ポートフォリオ作成</p>
+                                    <p>②案件獲得道場</p>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+
+                    <!-- step4 -->
+                    <details class="step_box step-box">
+                        <summary class="step-box-head">
+                            <p class="title">step4　/　Pronaviのサポート<br>
+                                あなたに寄り添い、挑戦を支え続けます。</p>
+                            <div class="icon"></div>
+                        </summary>
+
+                        <div class="step4-box-body">
+                            <div class="step-box-pointer">
+                                <h3>他社とは違う、<br>”<span>最後まで寄り添う</span>”<br>サポート体制。</h3>
+                                <p>学びも、仕事も、あなたひとりにはしません。</p>
+                            </div>
+
+                            <div class="point">
+                                <div class="point-content">
+                                    <p class="points">point01</p>
+                                    <img class="icons" src="img/calendar.png" alt="">
+                                    <p><span>スケジュールを毎週管理</span></p>
+                                    <p class="get">毎週、あなた専用の学習プランを作成。専属コーチが伴走します。</p>
+                                </div>
+
+                                <div class="point-content">
+                                    <p class="points">point02</p>
+                                    <img class="icons" src="img/line.png" alt="">
+                                    <p><span>公式LINEで24時間質問OK</span></p>
+                                    <p class="get">わからない瞬間に、すぐ質問できる。夜でも休日でも、いつでもサポート！</p>
+                                </div>
+                            </div>
+
+                            <div class="point-content">
+                                <div class="point">
+                                    <div class="point-contents">
+                                        <p class="points">point03</p>
+                                        <img class="icons" src="img/bag.png" alt="">
+                                        <p><span>案件獲得サポート</span></p>
+                                    </div>
+                                    <div class="point-text">
+                                        <p class="get">
+                                            案件獲得に向け、プロの営業マンが伴走。
+                                            あなたの営業に同行し、実際の営業を見ながら案件獲得を支援。
+                                            LINEでいつでも質問可能です。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="support">
+                                <div class="support-text">
+                                    <p class="support-content">～Pronaviサポートの思い～</p>
+                                    <p>案件獲得はゴールではなく、スタートです。</p>
+                                    <p>学んだ後も仲間と共に成長できる環境を提供しています。</p>
+                                    <p>あなたの未来を変える最初の一歩を、私たちが全力でサポートします。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+
+                    <!-- step5 -->
+                    <details class="step_box step-box">
+                        <summary class="step-box-head">
+                            <p class="title">step5　/　受講スタート！！<br>
+                                ここから、あなたの未来が変わり始めます！</p>
+                            <div class="icon"></div>
+                        </summary>
+
+                        <div class="step5-box-body">
+                            <div class="step-box-start">
+                                <h3>ここからがスタートです。</h3>
+                                <p class="lost">あなたの挑戦を<br>
+                                    <span>&emsp;&emsp;&emsp;&emsp;全力でサポート！🚀</span>
+                                </p>
+                            </div>
+
+                            <p>運営はもちろん！講師とPronaviの仲間たちが全力でサポート。</p>
+                            <p>一歩ずつ積み重ねて、理想のキャリアを一緒に実現していきましょう。</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <section id="teacher" class="p-tercher">
+                <div class="title-box title js-scroll-trigger">
+                    <h2 data-en="Teacher">講師紹介</h2>
+                </div>
+                <div class="p-teacher__catch">
+                    <p>現場で活躍するプロが、マンツーマンで指導<br>
+                        “今”の技術を、“あなた”に届けます。</p>
+                </div>
+                <div class="p-teacher__cards">
+                    <div class="p-teacher__box">
+                        <div class="flip-inner">
+                            <div class="flip-front flip-image1">
+                                <p class="p-teacher__name">TESTU</p>
+                                <p class="p-teacher__text">その人にとって継続可能かつ、<br>着実にスキルをつけられるような学習方法を一緒に探し続けます。</p>
+                            </div>
+                            <div class="flip-back flip-image1">
+                                <div class="p-teacher__mask">
+                                    <p>プログラミング学習は筋トレに似ていると思います。人それぞれ体格も違えば、やるべき事も変わってくる。間違ったやり方で筋トレをし続けても結果には繋がりにくい。正しいやり方と継続がとても重要です。その人にとって継続可能かつ、しっかり最適な負荷をかけ続ける学習方法を一緒に探し続けます！
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-teacher__box">
+                        <div class="flip-inner">
+                            <div class="flip-front flip-image2">
+                                <p class="p-teacher__name">YURIKO</p>
+                                <p class="p-teacher__text">プログラミングスキルを習得するには環境×覚悟が必要だと思っています。</p>
+                            </div>
+                            <div class="flip-back flip-image2">
+                                <div class="p-teacher__mask">
+                                    <p>世の中には数多くの学習教材や学習方法が溢れていますが、プロナビはあなたの目標を最短で達成するためにはどの手段を取ることが正しいのか、忙しいあなたでも学習が継続できるような仕組みや環境を提供します。「スキルを伸ばす」その覚悟を持っていただければ、私たちコンサルタント一同、全力で、最短でプログラミングスキルを伸ばすサポートをさせていただきます！
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-teacher__box">
+                        <div class="flip-inner">
+                            <div class="flip-front flip-image3">
+                                <p class="p-teacher__name">AOKI</p>
+                                <p class="p-teacher__text">卒業後も自分の力で成長していけるような学習スキルも同時に身につけて欲しい</p>
+                            </div>
+                            <div class="flip-back flip-image3">
+                                <div class="p-teacher__mask">
+                                    <p>プログラミングは多くの言語があり、使われる言語の変化も早いです。そのため、実際に仕事をするときに新しい知識が必要になってくることもあるため、ただ覚えるだけではなく、自分の力で学習を進めていく能力も半年間を通して身につけていただきたいと思っています。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="portfolio" class="p-portfolio">
+                <div class="title-box title js-scroll-trigger">
+                    <h2 data-en="Portfolio">
+                        受講生の作品
+                    </h2>
+                    <div class="p-portfolio__text">
+                        <p>実際に受講生が制作した架空サイトや、実際の案件をもとに制作した作品をご紹介します。</p>
+                        <p>ここに並ぶ作品には、未経験から学び始めた方のものもあれば、経験を活かしてさらにスキルを磨いた方のものもあります。</p>
+                        <p>あなたも、次にここに並ぶ作品のひとつを生み出してみませんか？</p>
+                    </div>
+                </div>
+                <div class="marquee-wrap">
+                    <div class="marquee-reverse">
+                        <!-- 画像 5枚（1セット目） -->
+                        <div class="p-portfolio__item"><img src="img/portfolio1.png"></div>
+                        <div class="p-portfolio__item"><img src="img/portfolio2.png"></div>
+                        <div class="p-portfolio__item"><img src="img/portfolio3.jpeg"></div>
+                        <div class="p-portfolio__item"><img src="img/portfolio4.jpg"></div>
+                        <div class="p-portfolio__item"><img src="img/portfolio5.png"></div>
+
+                        <!-- 同じ画像をもう一度（2セット目）→ これで完全無限ループ化 -->
+                        <div class="p-portfolio__item"><img src="img/portfolio1.png"></div>
+                        <div class="p-portfolio__item"><img src="img/portfolio2.png"></div>
+                        <div class="p-portfolio__item"><img src="img/portfolio3.jpeg"></div>
+                        <div class="p-portfolio__item"><img src="img/portfolio4.jpg"></div>
+                        <div class="p-portfolio__item"><img src="img/portfolio5.png"></div>
+
+                    </div>
+                </div>
+                <div class="marquee-wrap">
+                    <div class="marquee">
+                        <!-- 画像 5枚（1セット目） -->
+                        <div class="p-portfolio__item"><img src="img/portfolio6.png"></div>
+                        <div class="p-portfolio__item"><img src="img/portfolio7.png"></div>
+                        <div class="p-portfolio__item"><img src="img/portfolio8.png"></div>
+                        <div class="p-portfolio__item"><img src="img/portfolio9.png"></div>
+                        <div class="p-portfolio__item"><img src="img/portfolio10.png"></div>
+
+
+                        <!-- 同じ画像をもう一度（2セット目）→ これで完全無限ループ化 -->
+                        <div class="p-portfolio__item"><img src="img/portfolio6.png"></div>
+                        <div class="p-portfolio__item"><img src="img/portfolio7.png"></div>
+                        <div class="p-portfolio__item"><img src="img/portfolio8.png"></div>
+                        <div class="p-portfolio__item"><img src="img/portfolio9.png"></div>
+                        <div class="p-portfolio__item"><img src="img/portfolio10.png"></div>
+                    </div>
+                </div>
+
+                <div class="p-portfolio__induction-text">
+                    <p>素敵な作品たちを見ていきませんか？</p>
+                </div>
+
+                <div class="p-portfolio__portnavi-button">
+                    <a href="https://pronavi-board.noe-p.com/">
+                        portnaviを覗く
+                    </a>
+                </div>
+            </section>
+
+            <section class="question">
+                <div class="wrapper">
+                    <div class="title-box title js-scroll-trigger">
+                        <h2 data-en="Q&A">よくある質問</h2>
+                    </div>
+                    <div class="accordion-header">
+                        <span>Q1</span>
+                        <p>従来のプログラミングスクールとは何が違いますか？</p>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="flex-box"><span>A1</span>
+                            <p>
+                                プログラミングスクールの多くは「コードを知る」ことに主眼を置いていますが、プロナビでは模写コーディングを含む複数のトレーニングを組み合わせてお客様ごとの最適カリキュラムをご提案します。また、日々の学習を支援する多彩なサポートを用意しています。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-header">
+                        <span>Q2</span>
+                        <p>どんな教材を使用しますか？</p>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="flex-box"><span>A2</span>
+                            <p>
+                                当社が厳選した市販教材とオリジナル教材の中から、お客様にとって最適な組み合わせをご提案します。どのような教材を用いるかは無料カウンセリングにてお問い合わせください。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-header">
+                        <span>Q3</span>
+                        <p>専属コンサルタントは変えられますか？</p>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="flex-box"><span>A3</span>
+                            <p>
+                                可能です。ご希望の場合は、公式事務局LINEまでお問い合わせください。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-header">
+                        <span>Q4</span>
+                        <p>パソコンは必要ですか？</p>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="flex-box"><span>A4</span>
+                            <p>
+                                プログラミングの学習ではパソコンは必須になります。貸し出しなどは行っていないため、ご用意必要になります。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-header">
+                        <span>Q5</span>
+                        <p>学習時間が確保できるか不安ですが、大丈夫ですか？</p>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="flex-box"><span>A5</span>
+                            <p>
+                                ご安心ください。多くの方が最初は不安を感じていますが、専属コンサルタントのタイムマネジメントやモチベーション管理などのきめ細かいサポートで、実際に激務の中で働いている方もプログラミングスキルを向上されています。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-header">
+                        <span>Q6</span>
+                        <p>校舎に通うのが難しいのですが、大丈夫ですか？</p>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="flex-box"><span>A6</span>
+                            <p>
+                                基本的にオンライン受講となっています。対面受講の場合と同等のプログラミングスキル上達の実績を上げております。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <p class="copylight">&copy;NOE Co.ltd</p>
+            </footer>
+
+
         </div>
         <!-- 右側の動画や疑似エディタを置くカラム -->
         <div class="right-col">
@@ -545,11 +1071,15 @@
     </div>
 
 
+    <!-- 追従用の要素 -->
+    <div class="cursor-stalker"><span class="label">click</span></div>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/mainvisual.js"></script>
+    <script src="assets/js/marker.js"></script>
     <script type="module" src="assets/js/modal.js"></script>
     <script src="/assets/js/hamburger.js"></script>
     <script src="assets/js/reason.js"></script>
@@ -567,6 +1097,8 @@
                 }
             });
         });</script>
+    <script src="assets/js/cursor.js"></script>
+    <script src="assets/js/question.js"></script>
 </body>
 
 </html>

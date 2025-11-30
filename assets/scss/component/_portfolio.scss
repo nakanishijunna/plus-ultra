@@ -1,0 +1,140 @@
+
+.p-portfolio {
+    padding-block: 5rem;
+    position: relative;
+}
+
+.p-portfolio::before {
+    content: "";
+    background-image: url(../../../img/portfolio-bg.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(2px);
+    z-index: -1;
+}
+
+.p-portfolio__text {
+    color: #3C4043;
+    background-color: rgba(217, 217, 217, 0.5);
+    /* margin-inline: 2rem; */
+    margin-bottom: 5rem;
+    padding: 1rem;
+    width: 80%;
+    margin-inline: auto;
+    border-radius: 10px;
+}
+
+.p-portfolio__text p {
+    padding-bottom: 1rem;
+}
+
+.marquee-wrap {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+
+/* マルチコンテナ（画像2セット分） */
+.marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+}
+
+.marquee-reverse {
+    display: flex;
+    width: max-content;
+    animation: scroll-reverse 20s linear infinite;
+}
+
+
+/* ホバーで止まる */
+.marquee-wrap:hover .marquee,
+.marquee-wrap:hover .marquee-reverse {
+    animation-play-state: paused;
+}
+
+/* 画像エリア */
+.p-portfolio__item {
+    width: 260px;
+    height: 160px;
+    margin-right: 20px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.p-portfolio__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+/* 横移動アニメーション（ここを速さ調整に使える） */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-reverse {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.p-portfolio__induction-text {
+    padding-block: 1rem 2rem;
+    text-align: center;
+}
+
+.p-portfolio__portnavi-button {
+    width: 80%;
+    text-align: center;
+    margin-inline: auto;
+}
+
+.p-portfolio__portnavi-button a {
+    font-size: 1rem;
+    color: #fff;
+    background-image: linear-gradient(90deg, #ffc22f, #f58b05);
+    letter-spacing: .1em;
+    padding: 0.9375rem 1.25rem;
+    border: 1px solid #ffc22f;
+    border-radius: 1.5625rem;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    width: 70%;
+    justify-content: center;
+    position: relative;
+    transition: all .3s;
+
+}
+
+/* 768px以下: 縦積みで画面幅いっぱい */
+@media (max-width: 768px) {
+    .layout {
+        grid-template-columns: 100%;
+    }
+
+    .col.center {
+        width: 100%;
+    }
+
+}
