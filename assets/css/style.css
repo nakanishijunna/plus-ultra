@@ -493,7 +493,7 @@ footer p {
 }
 
 .p-empathy__worries__wrapper {
-  background-image: url(../../../img/worries-bg.jpg);
+  background-image: url(/img/worries-bg.jpg);
   background-position: center;
   background-size: cover;
   padding-block: 20rem 3rem;
@@ -527,7 +527,7 @@ footer p {
   margin-left: auto;
 }
 .p-empathy__answer-wrapper {
-  background-image: url(../../../img/answer-bg.jpg);
+  background-image: url(/img/answer-bg.jpg);
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -860,11 +860,6 @@ footer p {
   font-size: 20px;
 }
 
-@media (max-width: 550px) {
-  .step-box-head {
-    font-size: 15px;
-  }
-}
 /* Webkitのマーカー削除 */
 .step-box summary::-webkit-details-marker {
   display: none;
@@ -873,7 +868,6 @@ footer p {
 /* 左側のテキスト欄 */
 .step-box-head .step {
   color: #333;
-  width: 100%;
 }
 
 .step-box-head .subtitle {
@@ -2186,15 +2180,15 @@ step5 デザイン（画像に完全合わせ）
 }
 
 .flip-image1 {
-  background-image: url(../../../img/teacher1.jpg);
+  background-image: url(/img/teacher1.jpg);
 }
 
 .flip-image2 {
-  background-image: url(../../../img/teacher2.jpg);
+  background-image: url(/img/teacher2.jpg);
 }
 
 .flip-image3 {
-  background-image: url(../../../img/teacher3.jpg);
+  background-image: url(/img/teacher3.jpg);
 }
 
 .p-teacher__name {
