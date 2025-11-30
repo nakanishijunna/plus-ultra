@@ -27,6 +27,7 @@
 .g__counseling__tab.g__counseling__sp {
   position:sticky;
   top: 60px;
+  z-index: 9999;
 }
 
 .g__counseling__tab .g__counseling__container{
@@ -163,3 +164,6 @@
 .g__counseling__line:hover::after {
   transform: scale(1, 1);
 }
+
+
+//スマホビューになったときに要素が一番上にくるようにする
