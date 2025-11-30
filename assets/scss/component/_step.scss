@@ -111,6 +111,12 @@
     font-size: 20px;
 }
 
+@media(max-width:550px){
+    .step-box-head{
+        font-size: 15px;
+    }
+}
+
 /* Webkitのマーカー削除 */
 .step-box summary::-webkit-details-marker {
     display: none;
