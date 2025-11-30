@@ -9,13 +9,13 @@ function toggleClassByWidth() {
 
     const empathyBottom = empathy.offsetTop + empathy.offsetHeight;
 
-    if(window.scrollY >= empathyBottom){
+    if (window.scrollY >= empathyBottom) {
       tab.classList.add('g__counseling__sp');
-  } else {
-    tab.classList.remove('g__counseling__sp');
-  }
+    } else {
+      tab.classList.remove('g__counseling__sp');
     }
   }
+}
 
 toggleClassByWidth();
 
