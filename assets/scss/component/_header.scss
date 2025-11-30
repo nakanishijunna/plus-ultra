@@ -5,7 +5,7 @@
   }
 }
 
-.p-header__s {
+.p-header__sp {
   display: none;
   @include mq(tab) {
     display: block;
@@ -26,7 +26,6 @@
     flex-direction: row;
     position: fixed;
     z-index: 9999;
-    width: 100vw;
     top: 0;
     padding: 2%;
     justify-content: space-between;
