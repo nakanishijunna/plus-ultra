@@ -3,15 +3,27 @@
  ****************************************************/
 const floatingLinks = document.getElementById("floatingLinks");
 
-window.addEventListener("scroll", () => {
+function updateFloatingLinks() {
   const mvHeight = document.querySelector(".hero").offsetHeight;
+  const isSp = window.innerWidth <= 768;
 
-  if (window.innerWidth <= 768) {
-    floatingLinks.style.display =
-      window.scrollY > mvHeight ? "flex" : "none";
+  if (isSp) {
+    // SP のときだけ表示・非表示を制御
+    floatingLinks.style.display = window.scrollY > mvHeight ? "flex" : "none";
+  } else {
+    // PC では常に非表示
+    floatingLinks.style.display = "none";
   }
-});
+}
 
+// スクロール時
+window.addEventListener("scroll", updateFloatingLinks);
+
+// 画面リサイズ時（ここが今回必要なコード！）
+window.addEventListener("resize", updateFloatingLinks);
+
+// 初期表示用
+updateFloatingLinks();
 /****************************************************
  *  追従ボタン → モーダルを開く
  ****************************************************/

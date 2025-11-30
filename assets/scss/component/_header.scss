@@ -20,6 +20,7 @@
 
 .p-header__wrapper {
   background-color: rgba(255, 246, 216, 0.7);
+  padding: 5%;
   @include mq(tab) {
     width: 100%;
     display: flex;
@@ -35,7 +36,6 @@
 }
 
 .p-header__logo {
-  // width: 60%;
   display: inline-block;
   @include mq(tab) {
     width: auto;
