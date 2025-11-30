@@ -1,7 +1,8 @@
 .inner {
-    max-width: 763px;
+    width: 440px;
     margin: 0 auto;
     padding-bottom: 50px;
+
 }
 
 .section-title {
@@ -19,7 +20,7 @@
 }
 
 .section-title p {
-    font-size: 16px;
+    font-size: 13px;
 }
 
 #step {
@@ -107,8 +108,7 @@
     align-items: flex-start;
     cursor: pointer;
     padding: 20px 20px;
-    margin-inline: 10px;
-    font-size: 20px;
+    margin-inline: -20px;
 }
 
 /* Webkitのマーカー削除 */
@@ -205,7 +205,6 @@
     padding: 25px 15px;
     margin-top: 15px;
     background-image: url("../../img/step1.png");
-    background-size: cover;
 }
 
 .step2-box-body {
@@ -374,7 +373,7 @@
 /* 「ステップ」「内容・期間」 */
 .curriculum:nth-of-type(2) {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background: #d9e5c3;
     padding-inline: 17%;
     border-radius: 16px;
@@ -392,25 +391,24 @@
 .curriculum {
     display: flex;
     justify-content: space-between;
-    gap: 20%;
+    gap: 20px;
     padding: 20px 18px;
     border-radius: 22px;
     margin-top: 20px;
     align-items: center;
     padding-right: 19%;
-    padding-left: 23%;
+    padding-left: 63px;
 }
 
 .curriculums {
     display: flex;
     justify-content: space-between;
-    gap: 20%;
+    gap: 20px;
     padding: 20px 18px;
     border-radius: 22px;
     margin-top: 20px;
     align-items: center;
-    padding-left: 23%;
-    padding-right: 10%;
+    padding-left: 63px;
 }
 
 /* 左の数字（1・2・3） */
@@ -492,7 +490,7 @@
 }
 
 .point .point-contents p span {
-    font-size: 20px;
+    font-size: 12px;
     font-weight: bold;
 }
 
@@ -501,13 +499,9 @@
 }
 
 .get {
-    padding: 30px;
+    padding-top: 8px;
     text-align: left;
     padding-inline: 10px;
-}
-
-.get .border{
-    border-bottom: 2px solid #ffb53b;
 }
 
 .point-content {
@@ -519,7 +513,6 @@
 
 .point-content p span {
     font-weight: bold;
-    font-size: 20px;
 }
 
 .point-contents {
@@ -531,7 +524,6 @@
     font-size: 20px;
     font-weight: bold;
     color: #2196F3;
-    padding-block: 15px 10px;
 }
 
 .support {

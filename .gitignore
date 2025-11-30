@@ -1,4 +1,4 @@
 
-# Sass
-*.map
-.sass-cache/
+# Sass output
+*.css
+*.css.map
