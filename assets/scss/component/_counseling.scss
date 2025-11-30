@@ -1,31 +1,6 @@
-.g__counseling.g__counseling__pc {
-  display: block;
-
-  @include mq(tab) {
-    display: none;
-  }
-}
-
-.g__counseling.g__counseling__tab {
-  display: none;
-
-  @media(max-width:768px) {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: auto;
-    z-index: 1000;
-
-    .g__counseling__reserve,
-    .g__counseling__line {
-      flex: 0 0 50%;
-    }
-}}
 
 
+//pcで左にある時
 .g__counseling__container {
   display: flex;
   max-width: 600px;
@@ -43,18 +18,33 @@
     height: 12vh;
   }
 
-
   img {
     width: 25px;
   }
+}
 
-  .g__counseling__text {
-    display: none;
 
-    @include mq(sp) {
-      display: block;
-    }
-  }
+.g__counseling__tab.g__counseling__sp {
+  position:sticky;
+  top: 60px;
+}
+
+.g__counseling__tab .g__counseling__container{
+  display: none;
+  z-index: 9999;
+}
+
+//spがついたときの中身
+.g__counseling__tab.g__counseling__sp .g__counseling__container{
+  position: sticky;
+  display: flex;
+  top: 60px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 768px;
+  height: 80px;
+  z-index: 9999;
 }
 
 
@@ -70,11 +60,11 @@
   height: 100%;
   padding: 10px 5px;
   background-color: #FFC22F;
-  z-index: 1;
+  z-index: 9999;
 
   @media(max-width: 768px) {
-        flex-basis: 50%;
-      }
+    flex-basis: 50%;
+  }
 
   h3 {
     margin-bottom: 5px;
@@ -128,11 +118,11 @@
   height: 100%;
   padding: 10px 5px;
   background-color: #07B53B;
-  z-index: 1;
+  z-index: 9999;
 
   @media(max-width: 768px) {
-        flex-basis: 50%;
-      }
+    flex-basis: 50%;
+  }
 
   h3 {
     margin-bottom: 5px;
