@@ -2,9 +2,9 @@
   背景動画 3 本をループ再生
 ------------------------------ */
 const videoList = [
-"../../img/VidnozImageToVideo1.mp4",
-  "../../img/VidnozImageToVideo2.mp4",
-  "../../img/VidnozImageToVideo3.mp4",];
+  "./img/VidnozImageToVideo1.mp4",
+  "./img/VidnozImageToVideo2.mp4",
+  "./img/VidnozImageToVideo3.mp4",];
 
 let currentVideo = 0;
 const bgVideo = document.getElementById("bgVideo");
