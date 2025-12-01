@@ -204,7 +204,7 @@
     align-items: center;
     padding: 25px 15px;
     margin-top: 15px;
-    background-image: url("../../img/step1.png");
+    background-image: url(../../img/step1.png);
 }
 
 .step2-box-body {
@@ -237,7 +237,7 @@
     align-items: center;
     padding: 25px 15px;
     margin-top: 15px;
-    background-image: url("../../img/Union.png");
+    background-image: url(../../img/Union.png);
 }
 
 .step-box-inner {
@@ -572,7 +572,7 @@ step5 デザイン（画像に完全合わせ）
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("img/Union.png");
+    background-image: url(../../img/Union.png);
     background-size: cover;
     background-position: center;
     opacity: 0.18;
